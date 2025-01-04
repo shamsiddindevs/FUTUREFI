@@ -10,7 +10,7 @@ export default {
     },
   },
   plugins: [
-    require('daisyui'),
+    import('daisyui'),
   ],
   daisyui: {
     themes: ["light", "dark"],
