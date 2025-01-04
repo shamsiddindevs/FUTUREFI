@@ -228,7 +228,7 @@ const Navbar = () => {
               {t("nav.online_courses")}
             </Link>
             <a
-              href="#contact"
+              href="#"
               className="nav_link">
               {t("nav.contact")}
             </a>
