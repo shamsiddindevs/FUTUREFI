@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .nav_link {
+    @apply inline-flex items-center justify-center rounded-md font-medium  transition-colors  disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-200  h-10 px-4 py-2;
+  }
+  .btn_text{
+    @apply text-[#f8fafc]
+  }
+}
+
+/* Cursor */
+.typed-cursor {
+  color: rgb(234 179 8);
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+

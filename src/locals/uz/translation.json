@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "contact": "Bog'lanish",
+    "online_courses": "Online kurslar",
+    "online_classes": "Online darslar"
+  },
+  "hero": {
+    "title": "Yarating",
+    "subtitle":{
+      "fn":"Moliyaviy Bilimlar ",
+      "ff":"Moliyaviy Kelajak",
+      "fc":"Moliyaviy Ishonch"
+    },
+    "info": "FutureFi Network tarmog‘iga xush kelibsiz! Biz bepul onlayn resurslar va interaktiv darslar orqali o‘quvchilarga muhim moliyaviy ko‘nikmalarni o‘rgatish uchun shu yerdamiz. Bilimlarni oshiring, imkoniyatlarni o‘rganing va yorqin kelajakni shakllantiring!",
+    "cta": "  Kurslarni ko‘rib chiqish",
+    "cta2": "Darsga yozilish",
+    "count": {
+      "module": "Modullar",
+      "lesson": "Darslar",
+      "view": "Ko'rilgan"
+    }
+  },
+  "why_choose_us": {
+    "title": "Nega bizni tanlaysiz?",
+    "info": "FutureFi Network moliyaviy savodxonlikni oshirishga intilib, bundan ham ko‘prog‘ini taklif qiladi. Bizning markazimiz faqat asoslarga qaratilmaydi — u moliya sohasidagi barcha narsalarni o‘z ichiga oladi. Moliyani endi o‘rganishni boshlaysizmi yoki allaqachon bu sohaga qiziqasizmi, bu joy aynan siz uchun. Qulay, qiziqarli va amaliy ta'limni taqdim etib, odamlarning kuchliroq moliyaviy kelajakni qurishiga yordam beramiz."
+  },
+  "financial_literacy": {
+    "title": "Nega moliyaviy savodxonlik muhim?",
+    "info": "Moliyaviy savodxonlik barqaror va muvaffaqiyatli kelajakning kalitidir. Uni bilmaslik oilalarning resurslarni boshqarishda qiynalishiga, ortiqcha qarz olishiga va asosiy ehtiyojlarini qoplashda muammolarga olib kelishi mumkin. Bu uzoq muddatli barqarorlikka to‘sqinlik qiladigan muammolarni keltirib chiqaradi."
+  },
+  "understanding_finance": {
+    "title": "Qanday Qilib Mliyaviy Bilimlar Hayotni O‘zgartirishi Mumkin?",
+    "info": "Moliya — bu barqarorlik va imkoniyatlarning asosi. Moliyaviy savodxonlik odamlarga ongli qarorlar qabul qilish, qarzlarni kamaytirish, va maqsadlariga erishishda yordam beradi. Bizning dasturimiz asosiy bilimlardan tashqari moliyaning boshqa sohalarini ham qamrab oladi. Biz o‘quvchilarga zarur ko‘nikmalarni berib, moliyaviy beqarorlik doirasini buzishga va yangi avlodni moliya sohasida muvaffaqiyatga tayyorlashga intilamiz, barqaror kelajakni yaratishda hissa qo‘shamiz."
+  },
+  "ceo_message": {
+    "subtitle": "Onlayn, o‘zingizning tezligingizda",
+    "title": "FutureFi Network bosh direktori",
+    "info": "Salom, mening ismim Abdulaziz, lekin hamma meni Aziz deb chaqiradi. Bolaligimdan moliyaga qiziqaman, lekin uni o‘rganish ko‘pincha murakkab tuyulardi. Bu menga FutureFi Network platformasini yaratishga ilhom berdi — bu platforma moliyaviy ta’limni har kim uchun oson va tushunarli qiladi. Mening maqsadim — o‘quvchilarga muhim moliyaviy ko‘nikmalarni o‘rgatish va moliyaviy savodxon avlodni tarbiyalash. Men Toshkentdagi Leader School’da, Bostondagi CATS Academy’da tahsil oldim, hozir esa AQShdagi Pomfret School’da o‘qiyman. Shuningdek, men shaxmat va basketbolga qiziqaman va Toshkent, O‘zbekistonni o‘z uyim deb bilaman."
+  },
+  "what_we_offer": {
+    "title": "Biz Nimani Taklif Qilamiz?",
+    "cards": [
+      {
+        "title": "Onlayn darslar",
+        "message": "Biz Zoom platformasida turli qiziqishlar va darajalarga moslashtirilgan tuzilmali onlayn darslarni taklif qilamiz. Dars mazmuni videolardan farq qilib, noyob bilim va tajriba beradi. Guruhga qarab murakkablik darajasi moslashtiriladi, shunda barcha qatnashchilar — boshlang‘ich yoki ilg‘or o‘quvchilar bo‘lsin — o‘zlarini qo‘llab-quvvatlangan va rag‘batlantirilgan his qilishadi."
+      },
+      {
+        "title": "Onlayn kurslar",
+        "message": "Bizning kurslarimiz bepul taqdim etiladi va o‘rganishni mustahkamlash uchun oxirida testlar mavjud. Hozirgi kurslarimiz bilan bu yerda tanishing (Onlayn kurslar page ga havola). Kurslar asosan o‘rta maktab o‘quvchilari uchun mo‘ljallangan bo‘lsa-da, o‘rganishni istagan har bir kishi uchun ochiq!"
+      },
+      {
+        "title": "Kasbni o‘rganish: ",
+        "message": "Bizning noyob xususiyatlarimizdan biri bu moliyaviy kasblarni o‘rganishga bag‘ishlangan maxsus darslar seriyasi. Bu dastur moliya sohasida ishlashni xohlayotgan, ammo hali o‘z yo‘nalishini izlayotganlar uchun ideal."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "phone":    "Telefon",
+    "email_address": "Elektron pochta",
+    "subtitle": "Habar yuboring",
+    "name": "Ism",
+    "email": "Elektron pochta",
+    "message": "Xabar",
+    "send": "Yuborish"
+  },
+  "footer": {
+    "call_center": "Qo'ng'iroq markazi",
+    "company":"Kompaniya",
+    "company_names": ["Kurslar", "Tadbirlar", "Biz haqimizda", "Asosiy"],
+
+    "documents": "Davlat tomonidan tasdiqlangan hujjatlar",
+    "address": "Manzil",
+    "location": "Toshkent shahri, Yunusobod tumani, 5-uy"
+  }
+}

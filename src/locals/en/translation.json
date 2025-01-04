@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "contact": "Contact",
+    "online_courses": "Online courses",
+    "online_classes": "Online classes"
+  },
+  "hero": {
+    "title": "Build Your",
+    "subtitle":{
+      "fn":"Financial Knowledge ",
+      "ff":"Financial Future",
+      "fc":"Financial Confidence"
+    },
+    "info": "Welcome to FutureFi Network! We're here to equip learners with essential financial skills through free online resources and interactive classes. Build knowledge, explore opportunities, and shape a brighter future.",
+    "cta": "Browse Courses",
+    "cta2": "Sign Up for a Class",
+    "count": {
+      "module": "Modules",
+      "lesson": "Lessons",
+      "view": "Views"
+    }
+  },
+  "why_choose_us": {
+    "title": "Why Choose Us?",
+    "info": "FutureFi Network is dedicated to improving financial literacy while offering so much more. Our center doesn’t just focus on the basics—it revolves around everything in finance. Whether you're just starting to learn or already passionate about the field, this is the place for you. We believe improving financial literacy is key to creating financially stable communities. By providing education that is accessible, engaging, and practical, we help individuals build a stronger financial future."
+  },
+  "financial_literacy": {
+    "title": "  Why Financial Literacy Matters?",
+    "info": "Financial literacy is the foundation of a stable and prosperous future. Low financial literacy can lead to widespread financial difficulties, with families often struggling to manage resources effectively. Many make impulsive decisions, borrow excessively, and face challenges in affording essential needs. This creates a cycle of financial instability that affects long-term well-being."
+  },
+  "understanding_finance": {
+    "title": " How Understanding Finance Can Change Lives?",
+    "info": "Finance is the foundation for stability and opportunity. Financial literacy empowers individuals to make informed decisions and plan for a better future, helping families reduce debt, build stability, and achieve their goals. Our program goes beyond basic financial literacy, covering other topics in finance. By equipping learners with these essential skills, we aim to break cycles of financial instability and prepare a generation ready to thrive in all areas of finance, contributing to a more sustainable future."
+  },
+  "ceo_message": {
+    "subtitle": "Online, at your own pace",
+    "title": "CEO of FutureFi Network",
+    "info": "Hello, I’m Abdulaziz, but everyone calls me Aziz. I’ve been passionate about finance since childhood, but learning about it often felt overwhelming. That inspired me to create FutureFi Network—a platform to make financial education accessible and stress-free for anyone eager to learn. My goal is to equip learners with essential financial skills and shape a financially literate generation. I have studied at Leader School in Tashkent, CATS Academy in Boston, and currently, I attend Pomfret School in the USA. I’m also passionate about chess and basketball, and I’m proud to call Tashkent, Uzbekistan, my home."
+  },
+  "what_we_offer": {
+    "title": "What We Offer?",
+    "cards": [
+      {
+        "title": "Online Classes",
+        "message": "We offer structured online classes on the Zoom platform tailored to different interests and levels. The class content differs from the videos, offering insights and unique experiences. The level of difficulty is customized based on the group to ensure all participants, whether beginners or advanced learners, feel supported and challenged. "
+      },
+      {
+        "title": " Online Courses",
+        "message": "Our courses are available for free and include tests at the end to help reinforce learning. Please find our current offerings here(link to Online Courses page). While the courses are designed with high school students in mind, anyone eager to learn is welcome!"
+      },
+      {
+        "title": "  Career Exploration",
+        "message": "One of our unique features is that our dedicated class series explores financial career paths, helping students discover potential futures in finance. This program is ideal for those who know they want to pursue finance but are still exploring their future path."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email_address": "Email",
+    "subtitle": "Get in touch with us",
+    "name": "Name",
+    "email": "Email",
+    "message":  "Message",
+    "send": "Send"
+  },
+  "footer": {
+    "call_center": "Call Center",
+    "company": "Company",
+    "company_names": ["Courses", "Events", "About Us", "Main"],
+
+    "documents": "State-approved documents",
+    "address": "Address",
+    "location": "5 House, Yunusobod district, Tashkent city"
+  }
+}
