@@ -1,4 +1,3 @@
-import React from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
@@ -16,11 +15,11 @@ const App = () => {
           element:<Home/>
         },
         {
-          path:"courses",
+          path:"/courses",
           element:<Courses/>
         },
         {
-          path:"classes",
+          path:"/classes",
           element:<Classes/>
         }
 

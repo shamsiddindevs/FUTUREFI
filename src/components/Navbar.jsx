@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import  { useState} from "react";
 import {Link} from "react-router-dom";
 import logo from "../assets/logo.png";
 import uzb from "../assets/uzb.png";
@@ -6,7 +6,6 @@ import eng from "../assets/eng.png";
 import russian from "../assets/russian.png";
 
 import {useTranslation} from "react-i18next";
-import { use } from "react";
 
 const Navbar = () => {
 
@@ -56,11 +55,11 @@ const Navbar = () => {
                 className="nav_link">
                 {t("nav.home")}
               </Link>
-              <a
-                href="#about"
+              <Link
+                to={"/"}
                 className="nav_link">
                 {t("nav.about")}
-              </a>
+              </Link>
               <Link
                 to={"/classes"}
                 className="nav_link">

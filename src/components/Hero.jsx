@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import Typed from "typed.js";
-import hero from "../assets/hero.jpg";
 import {useTranslation} from "react-i18next";
 
 const Hero = () => {
@@ -23,7 +22,7 @@ const Hero = () => {
       // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
-  }, []);
+  }, [ el, t]);
 
   return (
     <section
@@ -32,17 +31,13 @@ const Hero = () => {
       <div className="container w-full mx-auto max-w-7xl px-5 isolate  ">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">
           <div className="lg:min-h-[448px] flex flex-col gap-4">
-            <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-normal my-5">
-              {
-                t("hero.title")
-              } <br />{" "}
+            <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">
+              {t("hero.title")} <br />{" "}
               <span
                 ref={el}
                 className="text-yellow-500 min-w-[500px]"></span>
             </h1>
-            <p>
-             {t("hero.info")}
-            </p>
+            <p>{t("hero.info")}</p>
             <div className="btn_group   flex gap-2  flex-wrap">
               <a
                 href="#"
