@@ -1,4 +1,4 @@
-import React from 'react';
+
 import onlineClass from '../assets/online-class.png';
 import onlineCourse from '../assets/online-course.png';
 import career from '../assets/career.png';
@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 const StudentProfiles = () => {
     const {t} = useTranslation();
     return (
-        <section className="py-20  text-center">
+        <section className="py-20  text-center ">
         
             <h2 className="text-4xl font-bold mb-10">
                 {t("what_we_offer.title")}

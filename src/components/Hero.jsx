@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
+      id="hero "
       className=" mb-20 py-5">
       <div className="container w-full mx-auto max-w-7xl px-5 isolate  ">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">

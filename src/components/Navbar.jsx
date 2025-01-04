@@ -6,6 +6,7 @@ import eng from "../assets/eng.png";
 import russian from "../assets/russian.png";
 
 import {useTranslation} from "react-i18next";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
 
@@ -36,8 +37,8 @@ const Navbar = () => {
       <header className=" transition-colors sticky top-0 w-full z-10 backdrop-blur-xl">
         <div className="container w-full mx-auto max-w-7xl px-5 py-5">
           <nav className="flex items-center justify-between">
-            <Link
-              to={"/"}
+            <HashLink
+              to={"/#"}
               className="flex items-center gap-1">
               <img
                 src={logo}
@@ -48,33 +49,27 @@ const Navbar = () => {
                 <span className="text-sm leading-3">FUTUREFI</span> <br />
                 Network
               </span>
-            </Link>
+            </HashLink>
             <div className="hidden lg:flex gap-1">
-              <Link
-                to={"/"}
-                className="nav_link">
+            <HashLink  to="/#" className="nav_link">
                 {t("nav.home")}
-              </Link>
-              <Link
-                to={"/"}
-                className="nav_link">
+              </HashLink>
+              <HashLink  to="/#about" className="nav_link">
                 {t("nav.about")}
-              </Link>
-              <Link
-                to={"/classes"}
+              </HashLink>
+              <HashLink
+                to={"/classes#"}
                 className="nav_link">
                 {t("nav.online_classes")}
-              </Link>
-              <Link
-                to={"/courses"}
+              </HashLink>
+              <HashLink
+                to={"/courses#"}
                 className="nav_link">
                 {t("nav.online_courses")} 
-              </Link>
-              <a
-                href="#contact"
-                className="nav_link">
+              </HashLink>
+              <HashLink  to="/#contact" className="nav_link">
                 {t("nav.contact")}
-              </a>
+              </HashLink>
             </div>
             <div className="flex items-center gap-4 ">
               {/* Language Selector */}

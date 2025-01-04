@@ -1,7 +1,8 @@
-import React from 'react';
+
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
+
 
 
 const ContactForm = () => {
@@ -71,6 +72,9 @@ const ContactForm = () => {
             </div>
         </div>
         </div>
+
+
+       
        </div>
     );
 };
