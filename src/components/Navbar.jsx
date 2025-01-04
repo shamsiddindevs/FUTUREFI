@@ -210,27 +210,27 @@ const Navbar = () => {
             <a
               href="#"
               className="nav_link">
-              {t("home")}
+              {t("nav.home")}
             </a>
             <a
               href="#about"
               className="nav_link">
-              {t("about")}
+              {t("nav.about")}
             </a>
             <Link
               to={"/classes"}
               className="nav_link">
-              {t("online_classes")}
+              {t("nav.online_classes")}
             </Link>
             <Link
               className="nav_link"
               to={"/courses"}>
-              {t("online_courses")}
+              {t("nav.online_courses")}
             </Link>
             <a
               href="#contact"
               className="nav_link">
-              {t("contact")}
+              {t("nav.contact")}
             </a>
             <a
               href="+998951270090"
