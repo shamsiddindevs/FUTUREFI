@@ -1,7 +1,9 @@
 // src/services/apiService.js
 import axios from 'axios';
 
-const BASE_URL = 'https://mission.uz/en/api/v1/';
+const BASE_URL = import.meta.env.VITE_API_URL;
+console.log(BASE_URL);
+
 
 export const getSwaggerData = async (end) => {
     try {
