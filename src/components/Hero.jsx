@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import Typed from "typed.js";
 import {useTranslation} from "react-i18next";
+import { getSwaggerData } from "./apiServer";
+import CountUp from "react-countup";
 
 const Hero = () => {
   const {t} = useTranslation();
@@ -23,6 +25,24 @@ const Hero = () => {
       typed.destroy();
     };
   }, [ el, t]);
+
+  const [statistics, setStatistics] = React.useState(null);
+
+  useEffect(() => {
+    const fetchStatistics = async () => {
+      try {
+        const response = await getSwaggerData("statistics/");
+        console.log(response);
+        
+        setStatistics(response);
+      } catch (error) {
+        console.error("Error fetching statistics:", error);
+      }
+    };
+
+    fetchStatistics();
+  }, []);
+  
 
   return (
     <section
@@ -51,16 +71,16 @@ const Hero = () => {
               </a>
             </div>
             <div className=" flex gap-10">
-              <div className="text-center">
-                <h3 className="text-[30px] font-medium">45+</h3>
+              <div className="">
+              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.moduls} duration={3} separator="," />
                 <p className="text-md">{t("hero.count.module")}</p>
               </div>
-              <div className="text-center">
-                <h3 className="text-[30px] font-medium">5+</h3>
+              <div className="">
+              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.videos} duration={3} separator="," />
                 <p className="text-md"> {t("hero.count.lesson")} </p>
               </div>
-              <div className="text-center">
-                <h3 className="text-[30px] font-medium">1200+</h3>
+              <div className="">
+              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.views} duration={3} separator="," />
                 <p className="text-md">{t("hero.count.view")}</p>
               </div>
             </div>

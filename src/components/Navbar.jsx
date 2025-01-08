@@ -63,7 +63,7 @@ const Navbar = () => {
                 {t("nav.online_classes")}
               </HashLink>
               <HashLink
-                to={"/courses#"}
+                to={"/courseIntro#"}
                 className="nav_link">
                 {t("nav.online_courses")} 
               </HashLink>
@@ -218,7 +218,7 @@ const Navbar = () => {
             </Link>
             <Link
               className="nav_link"
-              to={"/courses"}>
+              to={"/courseIntro"}>
               {t("nav.online_courses")}
             </Link>
             <a

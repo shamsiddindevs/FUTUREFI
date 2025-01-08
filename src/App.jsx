@@ -3,6 +3,8 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Classes from "./pages/Classes";
+import Quiz from "./pages/Quest";
+import CourseIntro from "./pages/CourseIntro";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const App = () => {
         {
           path:"/classes",
           element:<Classes/>
+        },
+        {
+          path:"/quest",
+          element:<Quiz/>
+        },
+        {
+          path:"/courseIntro",
+          element:<CourseIntro/>
         }
 
       ],
