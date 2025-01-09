@@ -97,7 +97,7 @@ const Courses = () => {
   return (
     <div className=" px-2 pt-2  bg-gray-200 h-full">
       <div className="flex flex-col md:flex-row gap-2">
-        <ul className="w-full md:w-64 sm:block  bg-white shadow-lg p-6 rounded-lg">
+        <ul className="w-full md:w-64 sm:block  bg-white shadow-lg p-6 rounded-lg overflow-auto h-[85vh]">
           <li>
             {" "}
             <h1 className="text-2xl font-bold font-spaceGrotesk mb-6">Kurs tarkibi</h1>
@@ -105,7 +105,7 @@ const Courses = () => {
           {modules?.map((module) => (
             <li
               key={module.id}
-              className="border-b py-3">
+              className=" py-3">
               <div className="flex justify-between items-center">
                 <span className="text-[#444] text-[16px] font-semibold  font-spaceGrotesk">
                   {module.title}
@@ -123,7 +123,7 @@ const Courses = () => {
                       key={video.id}
                       className="flex justify-between items-center hover:bg-slate-100 px-2 rounded-md cursor-pointer ">
                       <div className="py-2 flex w-full  justify-between items-center ">
-                        <span >{video.id}. {video.name}</span>
+                        <span className="text-sm">{video.id}. {video.name}</span>
                       </div>
                       {/* <input
                         type="checkbox"
@@ -167,7 +167,7 @@ const Courses = () => {
                         }>
                         Oldingi dars {""}
                       </button>
-                      <h3 className="font-semibold text-lg uppercase">
+                      <h3 className="font-semibold text-md capitalize">
                         {video.id}. {video.name}
                       </h3>
                       {module.videos.findIndex((v) => v.id === video.id) ===

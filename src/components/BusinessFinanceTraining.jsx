@@ -8,7 +8,7 @@ const BusinessFinanceTraining = () => {
       id="about"
       className="py-10">
       <div className="lg:pt-10 pb-24">
-        <div className="container mx-auto max-w-[1440px] px-5 ">
+        <div className="container mx-auto max-w-[1240px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
             <div className="">
@@ -40,7 +40,7 @@ const BusinessFinanceTraining = () => {
 
       {/* Practice using real-life scenarios */}
       <div className="pb-24">
-        <div className="container mx-auto max-w-[1440px] px-5 ">
+        <div className="container mx-auto max-w-[1240px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
 
@@ -74,7 +74,7 @@ const BusinessFinanceTraining = () => {
 
       {/* Learn from the best */}
       <div className="pb-24">
-        <div className="container mx-auto max-w-[1440px] px-5 ">
+        <div className="container mx-auto max-w-[1240px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
             <div className="  ">
@@ -109,7 +109,7 @@ const BusinessFinanceTraining = () => {
       {/* about of Ceo */}
 
       <div className="lg:pb-10">
-        <div className="container mx-auto max-w-[1440px] px-5 ">
+        <div className="container mx-auto max-w-[1240px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Right Section (Image) */}
             <div className="order-2 md:order-1 flex justify-start">

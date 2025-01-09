@@ -3,6 +3,8 @@ import Typed from "typed.js";
 import {useTranslation} from "react-i18next";
 import {getSwaggerData} from "./apiServer";
 import CountUp from "react-countup";
+import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 const Hero = () => {
   const {t} = useTranslation();
@@ -47,7 +49,7 @@ const Hero = () => {
     <section
       id="hero "
       className="  py-10">
-      <div className="container w-full mx-auto max-w-[1440px] px-5 isolate  ">
+      <div className="container w-full mx-auto max-w-[1240px] px-5 isolate  ">
         <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20">
           <div className=" flex flex-col gap-4">
             <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">
@@ -58,16 +60,16 @@ const Hero = () => {
             </h1>
             <p>{t("hero.info")}</p>
             <div className="btn_group   flex gap-2  flex-wrap">
-              <a
-                href="#"
+              <Link
+                to="/courseIntro"
                 className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  btn_text">
                 {t("hero.cta")}
-              </a>
-              <a
-                href="#"
+              </Link>
+              <HashLink
+                to="#contact"
                 className="border border-yellow-500 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-yellow-500  hover:btn_text">
                 {t("hero.cta2")}
-              </a>
+              </HashLink>
             </div>
             <div className=" flex gap-10">
               <div className="">

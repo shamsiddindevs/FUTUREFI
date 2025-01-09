@@ -1,6 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 import 'daisyui/dist/full.css'; // Ensure you have DaisyUI installed
+import { toast } from 'react-hot-toast';
 
 const Post = () => {
     const [formData, setFormData] = useState({
@@ -28,13 +29,15 @@ const Post = () => {
                 formData
             );
             console.log("Response:", response.data);
+            toast.success('Successfully send !');
         } catch (error) {
             console.error("Error posting data:", error);
+            toast.error('Error posting data');
         }
     };
 
     return (
-        <form onSubmit={handleSubmit} className="p-4 bg-base-200 rounded-lg shadow-md">
+        <form onSubmit={handleSubmit} className="p-4 bg-base-200 rounded-lg shadow-md max-w-sm mx-auto w-full my-10">
             <div className="form-control mb-4">
                 <label className="label">
                     <span className="label-text">ID</span>
@@ -79,7 +82,7 @@ const Post = () => {
                     <span className="label-text">Ship Date</span>
                 </label>
                 <input
-                    type="text"
+                    type="datetime-local"
                     name="shipDate"
                     value={formData.shipDate}
                     onChange={handleChange}

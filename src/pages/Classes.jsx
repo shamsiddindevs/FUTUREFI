@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Footer from "../components/Footer";
 import Post from "../components/Post";
+import toast from "react-hot-toast";
 
 const Classes = () => {
   const [formData, setFormData] = useState({
@@ -37,20 +38,20 @@ const Classes = () => {
         }
       );
       if (response.ok) {
-        alert("Thank you for your feedback!");
+        toast.success("Thank you for your feedback!");
         console.log(await response.json());
       } else {
-        alert("Failed to submit feedback.");
+        toast.console.warn("Failed to submit feedback.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred while submitting feedback.");
+      toast.error("An error occurred while submitting feedback.");
     }
   };
 
   return (
     <>
-      <div className=" flex items-center justify-center my-20">
+      <div className="px-5 flex items-center justify-center my-10">
         <div className="w-full max-w-lg bg-white border border-yellow-200 rounded-lg shadow-lg p-8">
           <div className="text-center mb-6">
             <h1 className="text-lg md:text-xl lg:text-2xl font-bold bg-yellow-500 text-white rounded-lg py-3">
@@ -70,7 +71,7 @@ const Classes = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Name"
-                className="input border border-yellow-500 w-full"
+                className="input input-bordered border-yellow-500 w-full"
               />
             </div>
 
@@ -84,7 +85,7 @@ const Classes = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="example@example.com"
-                className="input border border-yellow-500 w-full"
+                className="input input-bordered border-yellow-500 w-full"
               />
             </div>
 
@@ -97,7 +98,7 @@ const Classes = () => {
                 value={formData.age}
                 placeholder="Age"
                 onChange={handleInputChange}
-                className="input border border-yellow-500 w-full"
+                className="input input-bordered border-yellow-500 w-full"
               />
             </div>
 
@@ -111,7 +112,7 @@ const Classes = () => {
                 value={formData.grade}
                 onChange={handleInputChange}
                 placeholder="Grade"
-                className="input border border-yellow-500 w-full"
+                className="input input-bordered border-yellow-500 w-full"
               />
             </div>
 
@@ -125,7 +126,7 @@ const Classes = () => {
                 value={1}
                 onChange={handleInputChange}
                 placeholder="We have only one category"
-                className="input border border-yellow-500 w-full"
+                className="input input-bordered border-yellow-500 w-full"
               />
             </div>
 
