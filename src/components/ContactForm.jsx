@@ -40,14 +40,29 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        toast.success("Message sent successfully!");
+        toast.success("Message sent successfully!", {
+          style: {
+            padding: "16px",
+            backgroundColor: "green",
+            color: "white",
+            fontSize: "20px",
+          },
+        });
         setFormData({name: "", email: "", message: ""});
       } else {
-        toast.warn("Failed to send message.");
+        toast.warn("Failed to send message.", {
+          style: {
+            padding: "16px",
+          },
+        });
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      toast.error("Error sending message.");
+      toast.error("Error sending message.", {
+        style: {
+          padding: "16px",
+        },
+      });
     }
   };
 

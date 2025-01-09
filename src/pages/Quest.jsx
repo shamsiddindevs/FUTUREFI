@@ -33,7 +33,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container p-4 bg-slate-200 rounded-lg w-96 mx-auto">
+    <div className="quiz-container p-4 bg-slate-200 rounded-lg w-96 mx-auto mt-28">
       {questions.length > 0 && (
         <>
           <h2>{questions[currentQuestion].questionText}</h2>

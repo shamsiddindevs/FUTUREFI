@@ -38,7 +38,14 @@ const Classes = () => {
         }
       );
       if (response.ok) {
-        toast.success("Thank you for your feedback!");
+        toast.success("Thank you for your feedback!", {
+          style: {
+            padding: "16px",
+            backgroundColor: "green",
+            color: "white",
+            fontSize: "20px",
+          },
+        });
         console.log(await response.json());
       } else {
         toast.console.warn("Failed to submit feedback.");
@@ -51,8 +58,8 @@ const Classes = () => {
 
   return (
     <>
-      <div className="px-5 flex items-center justify-center my-10">
-        <div className="w-full max-w-lg bg-white border border-yellow-200 rounded-lg shadow-lg p-8">
+      <div className="px-5 flex items-center justify-center my-10 ">
+        <div className="w-full max-w-lg bg-white border border-yellow-200 rounded-lg shadow-lg p-8 mt-[88px]">
           <div className="text-center mb-6">
             <h1 className="text-lg md:text-xl lg:text-2xl font-bold bg-yellow-500 text-white rounded-lg py-3">
               Tell Us What You Think

@@ -17,7 +17,7 @@ const App = () => {
           element:<Home/>
         },
         {
-          path:"/courses",
+          path:"/courses/:id",
           element:<Courses/>
         },
         {

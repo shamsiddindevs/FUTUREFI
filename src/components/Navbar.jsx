@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import logo from "../assets/logo.png";
 import uzb from "../assets/uzb.png";
 import eng from "../assets/eng.png";
-import russian from "../assets/russian.png";
+import russian from "../assets/ru.png";
 
 import {useTranslation} from "react-i18next";
 import {HashLink} from "react-router-hash-link";
@@ -29,7 +29,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className=" transition-colors sticky top-0 w-full z-10 backdrop-blur-xl">
+      <header className=" transition-colors fixed top-0 w-full z-10 backdrop-blur-xl">
         <div className=" w-full   px-5 py-5">
           <nav className="flex items-center justify-between">
             <HashLink
@@ -38,7 +38,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="header logo image"
-                className="w-12 h-12  object-cover"
+                className=" h-12  object-cover"
               />
               <span className=" font-medium leading-4 uppercase">
                 <span className="text-sm leading-3">FUTUREFI</span> <br />
@@ -146,11 +146,9 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-              <a
-                href="+998951270090"
-                className="hidden md:block hover:underline    font-semibold ">
+              <p className="hidden md:block     font-semibold ">
                 <span className="text-yellow-500">95</span> 127 00 90
-              </a>
+              </p>
 
               <button
                 className="inline-flex lg:hidden items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-200 hover:text-accent-foreground h-10 w-10 outline-none"
@@ -202,36 +200,39 @@ const Navbar = () => {
             X
           </div>
           <div className="flex py-12 flex-col gap-1">
-            <a
-              href="#"
+            <Link
+              onClick={() => setOverlay(!overlay)}
+              href="/"
               className="nav_link">
               {t("nav.home")}
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <HashLink
+            onClick={() => setOverlay(!overlay)}
+              to="/#about"
               className="nav_link">
               {t("nav.about")}
-            </a>
+            </HashLink>
             <Link
+            onClick={() => setOverlay(!overlay)}
               to={"/classes"}
               className="nav_link">
               {t("nav.online_classes")}
             </Link>
-            <Link
+            <HashLink
+            onClick={() => setOverlay(!overlay)}
               className="nav_link"
               to={"/courseIntro"}>
               {t("nav.online_courses")}
-            </Link>
-            <a
-              href="#"
+            </HashLink>
+            <HashLink
+            onClick={() => setOverlay(!overlay)}
+              to="/#contact"
               className="nav_link">
               {t("nav.contact")}
-            </a>
-            <a
-              href="+998951270090"
-              className="font-semibold md:hidden nav_link gap-1 ">
+            </HashLink>
+            <p className="font-semibold md:hidden nav_link gap-1 ">
               <span className="text-yellow-500">95</span>127 00 90
-            </a>
+            </p>
           </div>
         </div>
       </div>

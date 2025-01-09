@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="en" data-theme="light" >
-  
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTUREFI
-      Network</title>
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>FUTUREFI Network</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const language = localStorage.getItem('language') || 'en';
+        document.documentElement.lang = language;
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
