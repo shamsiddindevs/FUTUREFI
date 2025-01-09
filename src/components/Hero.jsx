@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import Typed from "typed.js";
 import {useTranslation} from "react-i18next";
-import { getSwaggerData } from "./apiServer";
+import {getSwaggerData} from "./apiServer";
 import CountUp from "react-countup";
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
       // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
-  }, [ el, t]);
+  }, [el, t]);
 
   const [statistics, setStatistics] = React.useState(null);
 
@@ -33,7 +33,7 @@ const Hero = () => {
       try {
         const response = await getSwaggerData("statistics/");
         console.log(response);
-        
+
         setStatistics(response);
       } catch (error) {
         console.error("Error fetching statistics:", error);
@@ -42,15 +42,14 @@ const Hero = () => {
 
     fetchStatistics();
   }, []);
-  
 
   return (
     <section
       id="hero "
-      className=" mb-20 py-5">
-      <div className="container w-full mx-auto max-w-7xl px-5 isolate  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">
-          <div className="lg:min-h-[448px] flex flex-col gap-4">
+      className="  py-10">
+      <div className="container w-full mx-auto max-w-[1440px] px-5 isolate  ">
+        <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20">
+          <div className=" flex flex-col gap-4">
             <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">
               {t("hero.title")} <br />{" "}
               <span
@@ -72,15 +71,33 @@ const Hero = () => {
             </div>
             <div className=" flex gap-10">
               <div className="">
-              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.moduls} duration={3} separator="," />
+                <CountUp
+                  className="text-[30px] font-medium"
+                  start={0}
+                  end={statistics?.moduls}
+                  duration={3}
+                  separator=","
+                />
                 <p className="text-md">{t("hero.count.module")}</p>
               </div>
               <div className="">
-              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.videos} duration={3} separator="," />
+                <CountUp
+                  className="text-[30px] font-medium"
+                  start={0}
+                  end={statistics?.videos}
+                  duration={3}
+                  separator=","
+                />
                 <p className="text-md"> {t("hero.count.lesson")} </p>
               </div>
               <div className="">
-              <CountUp className="text-[30px] font-medium" start={0} end={statistics?.views} duration={3} separator="," />
+                <CountUp
+                  className="text-[30px] font-medium"
+                  start={0}
+                  end={statistics?.views}
+                  duration={3}
+                  separator=","
+                />
                 <p className="text-md">{t("hero.count.view")}</p>
               </div>
             </div>

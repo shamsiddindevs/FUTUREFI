@@ -1,4 +1,4 @@
-import  { useState} from "react";
+import {useState} from "react";
 import {Link} from "react-router-dom";
 import logo from "../assets/logo.png";
 import uzb from "../assets/uzb.png";
@@ -6,10 +6,9 @@ import eng from "../assets/eng.png";
 import russian from "../assets/russian.png";
 
 import {useTranslation} from "react-i18next";
-import { HashLink } from "react-router-hash-link";
+import {HashLink} from "react-router-hash-link";
 
 const Navbar = () => {
-
   const {i18n, t} = useTranslation();
   const lang = localStorage.getItem("language") || "uz"; // Get language from local storage
 
@@ -23,11 +22,7 @@ const Navbar = () => {
     window.location.reload();
   };
 
-  
-
   const [isRotate, setIsRotate] = useState(false);
-
- 
 
   const toggleLang = () => {
     setIsRotate(!isRotate);
@@ -35,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <header className=" transition-colors sticky top-0 w-full z-10 backdrop-blur-xl">
-        <div className="container w-full mx-auto max-w-7xl px-5 py-5">
+        <div className=" w-full   px-5 py-5">
           <nav className="flex items-center justify-between">
             <HashLink
               to={"/#"}
@@ -51,10 +46,14 @@ const Navbar = () => {
               </span>
             </HashLink>
             <div className="hidden lg:flex gap-1">
-            <HashLink  to="/#" className="nav_link">
+              <HashLink
+                to="/#"
+                className="nav_link">
                 {t("nav.home")}
               </HashLink>
-              <HashLink  to="/#about" className="nav_link">
+              <HashLink
+                to="/#about"
+                className="nav_link">
                 {t("nav.about")}
               </HashLink>
               <HashLink
@@ -65,9 +64,11 @@ const Navbar = () => {
               <HashLink
                 to={"/courseIntro#"}
                 className="nav_link">
-                {t("nav.online_courses")} 
+                {t("nav.online_courses")}
               </HashLink>
-              <HashLink  to="/#contact" className="nav_link">
+              <HashLink
+                to="/#contact"
+                className="nav_link">
                 {t("nav.contact")}
               </HashLink>
             </div>
