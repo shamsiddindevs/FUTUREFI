@@ -55,7 +55,7 @@ const ContactForm = () => {
     <div className="py-10">
       <div
         id="contact"
-        className="w-full max-w-[1240px] mx-auto px-5">
+        className="w-full max-w-[1280px] mx-auto px-5">
         <h2 className="text-4xl font-bold mb-5 text-center">
           {t("contact.title")}
         </h2>
@@ -82,7 +82,7 @@ const ContactForm = () => {
               className="space-y-4"
               onSubmit={handleSubmit}>
               <input
-              required
+                required
                 type="text"
                 name="name"
                 value={formData.name}
@@ -91,7 +91,7 @@ const ContactForm = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
-              required
+                required
                 type="email"
                 name="email"
                 value={formData.email}

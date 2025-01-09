@@ -7,7 +7,7 @@ const Classes = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    age: "",
+    age: 0,
     grade: "",
     category: "",
     text_box_one: "",

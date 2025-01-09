@@ -1,7 +1,7 @@
 import {useTranslation} from "react-i18next";
-import money from "../assets/money.jpg"
-import bitcoin from "../assets/bitcoin.jpg"
-import cubs from "../assets/cubs.jpg"
+import money from "../assets/money.jpg";
+import bitcoin from "../assets/bitcoin.jpg";
+import cubs from "../assets/cubs.jpg";
 
 const BusinessFinanceTraining = () => {
   const {t} = useTranslation();
@@ -11,7 +11,7 @@ const BusinessFinanceTraining = () => {
       id="about"
       className="py-10">
       <div className="lg:pt-10 pb-24">
-        <div className="container mx-auto max-w-[1240px] px-5 ">
+        <div className="container mx-auto max-w-[1280px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
             <div className="">
@@ -35,7 +35,11 @@ const BusinessFinanceTraining = () => {
                   <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                 </svg>
               </div> */}
-              <img src={money} alt="money finance " className=" object-cover object-center flex-1" />
+              <img
+                src={money}
+                alt="money finance "
+                className=" object-cover object-center flex-1"
+              />
             </div>
           </div>
         </div>
@@ -44,13 +48,16 @@ const BusinessFinanceTraining = () => {
 
       {/* Practice using real-life scenarios */}
       <div className="pb-24">
-        <div className="container mx-auto max-w-[1240px] px-5 ">
+        <div className="container mx-auto max-w-[1280px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
 
             {/* Right Section (Image) */}
             <div className="order-2 md:order-1  flex justify-start  ">
-            <img src={bitcoin} alt="money finance "  />
+              <img
+                src={bitcoin}
+                alt="money finance "
+              />
               {/* <div className=" skeleton flex items-center justify-center w-full h-60 bg-gray-300 rounded sm:w-96 ">
                 <svg
                   className="w-10 h-10 text-gray-200 "
@@ -79,7 +86,7 @@ const BusinessFinanceTraining = () => {
 
       {/* Learn from the best */}
       <div className="pb-24">
-        <div className="container mx-auto max-w-[1240px] px-5 ">
+        <div className="container mx-auto max-w-[1280px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Left Section */}
             <div className="  ">
@@ -94,7 +101,10 @@ const BusinessFinanceTraining = () => {
 
             {/* Right Section (Image) */}
             <div className=" flex md:justify-end ">
-              <img src={cubs} alt="cubs money" />
+              <img
+                src={cubs}
+                alt="cubs money"
+              />
               {/* <div className=" skeleton flex items-center justify-center w-full h-60 bg-gray-300 rounded sm:w-96 ">
                 <svg
                   className="w-10 h-10 text-gray-200 "
@@ -115,7 +125,7 @@ const BusinessFinanceTraining = () => {
       {/* about of Ceo */}
 
       <div className="lg:pb-10">
-        <div className="container mx-auto max-w-[1240px] px-5 ">
+        <div className="container mx-auto max-w-[1280px] px-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Right Section (Image) */}
             <div className="order-2 md:order-1 flex justify-start">

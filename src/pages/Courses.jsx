@@ -3,7 +3,7 @@ import {useEffect} from "react";
 
 import {FaArrowRight, FaArrowDown} from "react-icons/fa";
 import {getSwaggerData} from "../components/apiServer";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Courses = () => {
   const [modules, setModules] = useState(null);
@@ -100,7 +100,9 @@ const Courses = () => {
         <ul className="w-full md:w-64 sm:block  bg-white shadow-lg p-6 rounded-lg overflow-auto h-[85vh]">
           <li>
             {" "}
-            <h1 className="text-2xl font-bold font-spaceGrotesk mb-6">Kurs tarkibi</h1>
+            <h1 className="text-2xl font-bold font-spaceGrotesk mb-6">
+              Kurs tarkibi
+            </h1>
           </li>
           {modules?.map((module) => (
             <li
@@ -113,7 +115,7 @@ const Courses = () => {
                 <button
                   onClick={() => toggleModule(module.id)}
                   className="text-gray-500 text-sm">
-                  {module.expanded ? <FaArrowDown  /> : <FaArrowRight />}
+                  {module.expanded ? <FaArrowDown /> : <FaArrowRight />}
                 </button>
               </div>
               {module.expanded && (
@@ -123,7 +125,9 @@ const Courses = () => {
                       key={video.id}
                       className="flex justify-between items-center hover:bg-slate-100 px-2 rounded-md cursor-pointer ">
                       <div className="py-2 flex w-full  justify-between items-center ">
-                        <span className="text-sm">{video.id}. {video.name}</span>
+                        <span className="text-sm">
+                          {video.id}. {video.name}
+                        </span>
                       </div>
                       {/* <input
                         type="checkbox"
@@ -138,7 +142,7 @@ const Courses = () => {
             </li>
           ))}
         </ul>
-        <div className="flex-1 h-[85vh] w-full max-w-[1240px] mx-auto  shadow-md rounded-lg overflow-hidden">
+        <div className="flex-1 h-[85vh] w-full max-w-[1280px] mx-auto  shadow-md rounded-lg overflow-hidden">
           {modules?.map((module) =>
             module.videos.map(
               (video) =>
@@ -172,9 +176,9 @@ const Courses = () => {
                       </h3>
                       {module.videos.findIndex((v) => v.id === video.id) ===
                       module.videos.length - 1 ? (
-                        <Link to={"/quest"}
-                          className="btn btn-primary btn-sm "
-                          >
+                        <Link
+                          to={"/quest"}
+                          className="btn btn-primary btn-sm ">
                           Start Quiz Test
                         </Link>
                       ) : (

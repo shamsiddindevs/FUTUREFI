@@ -10,7 +10,7 @@ const StudentProfiles = () => {
     <section className="py-10  text-center ">
       <h2 className="text-4xl font-bold mb-10">{t("what_we_offer.title")}</h2>
 
-      <div className="w-full max-w-[1240px] px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full max-w-[1280px] px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* University Students Card */}
         <div className="p-8 bg-white rounded-lg shadow-lg border-t-4 border-yellow-500">
           <div className="text-blue-500 text-5xl mb-4">

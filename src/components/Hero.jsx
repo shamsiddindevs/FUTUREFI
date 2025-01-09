@@ -5,7 +5,7 @@ import {getSwaggerData} from "./apiServer";
 import CountUp from "react-countup";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
-import hero from "../assets/hero.png"
+import hero from "../assets/hero.png";
 
 const Hero = () => {
   const {t} = useTranslation();
@@ -50,7 +50,7 @@ const Hero = () => {
     <section
       id="hero "
       className="  py-10">
-      <div className="container w-full mx-auto max-w-[1240px] px-5 isolate  ">
+      <div className="container w-full mx-auto max-w-[1280px] px-5 isolate  ">
         <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20">
           <div className=" flex flex-col gap-4">
             <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">
@@ -106,7 +106,11 @@ const Hero = () => {
             </div>
           </div>
           <div className=" ">
-            <img src={hero} alt="hero image" className="rounded-3xl skeleton object-cover " />
+            <img
+              src={hero}
+              alt="hero image"
+              className="rounded-3xl skeleton object-cover "
+            />
             {/* <svg
               className="w-12 h-12 text-yellow-100 dark:text-gray-600"
               aria-hidden="true"
