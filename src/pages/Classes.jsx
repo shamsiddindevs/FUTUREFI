@@ -71,7 +71,7 @@ const Classes = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Name"
-                className="input input-bordered border-yellow-500 w-full"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
               />
             </div>
 
@@ -85,7 +85,7 @@ const Classes = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="example@example.com"
-                className="input input-bordered border-yellow-500 w-full"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
               />
             </div>
 
@@ -98,7 +98,7 @@ const Classes = () => {
                 value={formData.age}
                 placeholder="Age"
                 onChange={handleInputChange}
-                className="input input-bordered border-yellow-500 w-full"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
               />
             </div>
 
@@ -112,7 +112,7 @@ const Classes = () => {
                 value={formData.grade}
                 onChange={handleInputChange}
                 placeholder="Grade"
-                className="input input-bordered border-yellow-500 w-full"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
               />
             </div>
 
@@ -126,7 +126,7 @@ const Classes = () => {
                 value={1}
                 onChange={handleInputChange}
                 placeholder="We have only one category"
-                className="input input-bordered border-yellow-500 w-full"
+                className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
               />
             </div>
 
@@ -140,7 +140,7 @@ const Classes = () => {
                 value={formData.text_box_one}
                 onChange={handleInputChange}
                 placeholder="Type here..."
-                className="w-full p-4 rounded-lg border border-yellow-500"></textarea>
+                className="w-full p-4 rounded-lg border border-gray-300 "></textarea>
             </div>
 
             {/* Text Box Two Section */}
@@ -153,7 +153,7 @@ const Classes = () => {
                 value={formData.text_box_two}
                 onChange={handleInputChange}
                 placeholder="Type here..."
-                className="w-full p-4 rounded-lg border border-yellow-500"></textarea>
+                className="w-full p-4 rounded-lg border border-gray-300"></textarea>
             </div>
 
             {/* Text Box Three Section */}
@@ -166,7 +166,7 @@ const Classes = () => {
                 value={formData.text_box_three}
                 onChange={handleInputChange}
                 placeholder="Type here..."
-                className="w-full p-4 rounded-lg border border-yellow-500"></textarea>
+                className="w-full p-4 rounded-lg border border-gray-300"></textarea>
             </div>
 
             {/* Check Box Section */}

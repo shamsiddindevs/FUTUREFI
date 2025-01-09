@@ -2,6 +2,7 @@ import {useState} from "react";
 import {FaPhoneAlt} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import {useTranslation} from "react-i18next";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const {t} = useTranslation();
@@ -20,8 +21,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = "YOUR_TELEGRAM_BOT_TOKEN";
-    const chatId = "YOUR_CHAT_ID";
+    const token = "7457301252:AAGAH2V943ZyZujcSybmXdiZRblWmomr_Bg";
+    const chatId = "-1002280372570";
     const text = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
@@ -39,14 +40,14 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({name: "", email: "", message: ""});
       } else {
-        alert("Failed to send message.");
+        toast.warn("Failed to send message.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Error sending message.");
+      toast.error("Error sending message.");
     }
   };
 
@@ -81,6 +82,7 @@ const ContactForm = () => {
               className="space-y-4"
               onSubmit={handleSubmit}>
               <input
+              required
                 type="text"
                 name="name"
                 value={formData.name}
@@ -89,6 +91,7 @@ const ContactForm = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
+              required
                 type="email"
                 name="email"
                 value={formData.email}
