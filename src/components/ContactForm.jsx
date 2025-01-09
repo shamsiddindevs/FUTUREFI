@@ -55,7 +55,7 @@ const ContactForm = () => {
     <div className="py-10">
       <div
         id="contact"
-        className="w-full max-w-[1280px] mx-auto px-5">
+        className="w-full max-w-[1320px] mx-auto px-5">
         <h2 className="text-4xl font-bold mb-5 text-center">
           {t("contact.title")}
         </h2>

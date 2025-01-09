@@ -50,7 +50,7 @@ const Hero = () => {
     <section
       id="hero "
       className="  py-10">
-      <div className="container w-full mx-auto max-w-[1280px] px-5 isolate  ">
+      <div className="container w-full mx-auto max-w-[1320px] px-5 isolate  ">
         <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20">
           <div className=" flex flex-col gap-4">
             <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">

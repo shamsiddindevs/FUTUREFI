@@ -142,7 +142,7 @@ const Courses = () => {
             </li>
           ))}
         </ul>
-        <div className="flex-1 h-[85vh] w-full max-w-[1280px] mx-auto  shadow-md rounded-lg overflow-hidden">
+        <div className="flex-1 h-[85vh] w-full max-w-[1320px] mx-auto  shadow-md rounded-lg overflow-hidden">
           {modules?.map((module) =>
             module.videos.map(
               (video) =>
