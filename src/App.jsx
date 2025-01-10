@@ -25,7 +25,7 @@ const App = () => {
           element:<Classes/>
         },
         {
-          path:"/quest",
+          path:"/quest/:id",
           element:<Quiz/>
         },
         {

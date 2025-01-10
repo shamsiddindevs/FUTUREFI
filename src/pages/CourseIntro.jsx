@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import {FaChevronUp, FaChevronDown} from "react-icons/fa";
+import {FaChevronUp, FaChevronDown, FaVideo, FaQuestion, FaStar} from "react-icons/fa";
 import {getSwaggerData} from "../components/apiServer";
 
 const CourseIntro = () => {
@@ -64,16 +64,17 @@ const CourseIntro = () => {
 
                   <div className="flex items-end justify-between gap-10">
                     <div className="flex flex-col gap-2">
-                      <p>
+                      <p className="flex items-center gap-2">
+                        <FaVideo className="text-blue-500" />
                         <strong>Videos:</strong> {module.videos_count}
                       </p>
-                      <p>
-                        <strong>Questions:</strong>
-                        {module.questions_count}
+                      <p className="flex items-center gap-2">
+                        <FaQuestion className="text-green-500" />
+                        <strong>Questions:</strong> {module.questions_count}
                       </p>
-                      <p>
-                        <strong>Rate:</strong>
-                        {module.rate}
+                      <p className="flex items-center gap-2">
+                        <FaStar className="text-yellow-500" />
+                        <strong>Rate:</strong> {module.rate}
                       </p>
                     </div>
                     <div className="info_group flex flex-wrap gap-4 items-center justify-between">

@@ -1,9 +1,8 @@
-import {useState} from "react";
-import {useEffect} from "react";
-
-import {FaArrowRight, FaArrowDown} from "react-icons/fa";
+import {useState, useEffect} from "react";
+import axios from "axios";
 import {getSwaggerData} from "../components/apiServer";
 import {Link, useParams} from "react-router-dom";
+import cubs from "../assets/cubs.jpg";
 
 const Courses = () => {
   const [module, setModule] = useState(null);
@@ -18,13 +17,6 @@ const Courses = () => {
       console.log(data);
     });
   }, [id]);
-
-  const toggleModule = () => {
-    setModule({
-      ...module,
-      expanded: !module?.expanded,
-    });
-  };
 
   useEffect(() => {
     if (
@@ -70,14 +62,33 @@ const Courses = () => {
     });
   };
 
+  useEffect(() => {
+    if (module) {
+      const playingVideo = module.videos.find(video => video.isPlaying);
+      if (playingVideo) {
+        axios.post('https://mission.uz/en/api/v1/add-view/', { video_id: playingVideo.id })
+          .then(response => {
+            console.log('Video view added:', response.data);
+          })
+          .catch(error => {
+            console.error('Error adding video view:', error);
+          });
+      }
+    }
+  }, [module]);
+
   return (
     <div className=" px-2 pt-2  bg-gray-200 h-full mt-[88px]">
       <div className="flex flex-col md:flex-row gap-2">
-        <ul className="w-full md:w-64 sm:block  bg-white shadow-lg p-6 rounded-lg overflow-auto h-[85vh]">
+        <ul className="relative w-full md:w-64 sm:block  bg-white shadow-lg p-6 pt-32 rounded-lg overflow-auto h-[85vh]">
           <li>
             {" "}
-            <h1 className="text-2xl font-bold font-spaceGrotesk mb-6">
-              Kurs tarkibi
+            <h1 className=" absolute top-0 left-0 text-2xl text-white w-full h-32 flex items-center p-4 font-bold font-spaceGrotesk mb-6" style={{
+          background:
+            `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ), url(${cubs})`,
+          backgroundSize: "cover",
+        }}>
+            {module ?module.name:"Kurs nomi"}
             </h1>
           </li>
           {module && (
@@ -86,27 +97,20 @@ const Courses = () => {
                 <span className="text-[#444] text-[16px] font-semibold  font-spaceGrotesk">
                   {module.title}
                 </span>
-                <button
-                  onClick={toggleModule}
-                  className="text-gray-500 text-sm">
-                  {module.expanded ? <FaArrowDown /> : <FaArrowRight />}
-                </button>
               </div>
-              {module.expanded && (
-                <div className="mt-3 ">
-                  {module.videos.map((video) => (
-                    <div
-                      key={video.id}
-                      className="flex justify-between items-center hover:bg-slate-100 px-2 rounded-md cursor-pointer ">
-                      <div className="py-2 flex w-full  justify-between items-center ">
-                        <span className="text-sm">
-                          {video.id}. {video.name}
-                        </span>
-                      </div>
+              <div className="mt-3 ">
+                {module.videos.map((video) => (
+                  <div
+                    key={video.id}
+                    className="flex justify-between items-center hover:bg-slate-100 px-2 rounded-md cursor-pointer ">
+                    <div className="py-2 flex w-full  justify-between items-center ">
+                      <span className="text-sm">
+                        {video.id}. {video.name}
+                      </span>
                     </div>
-                  ))}
-                </div>
-              )}
+                  </div>
+                ))}
+              </div>
             </li>
           )}
         </ul>
@@ -139,13 +143,13 @@ const Courses = () => {
                         }>
                         Oldingi dars {""}
                       </button>
-                      <h3 className="font-semibold text-md capitalize">
+                      <h3 className="font-semibold text-sm md:text-md capitalize">
                         {video.id}. {video.name}
                       </h3>
                       {module.videos.findIndex((v) => v.id === video.id) ===
                       module.videos.length - 1 ? (
                         <Link
-                          to={"/quest"}
+                          to={`/quest/${id}`}
                           className="btn btn-primary btn-sm ">
                           Start Quiz Test
                         </Link>

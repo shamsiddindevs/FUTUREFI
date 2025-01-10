@@ -60,7 +60,7 @@ const Classes = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        toast.success("Thank you for your feedback!", {
+        toast.success("Please verify your email!", {
           style: {
             padding: "16px",
             backgroundColor: "green",
