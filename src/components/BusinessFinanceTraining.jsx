@@ -1,7 +1,7 @@
 import {useTranslation} from "react-i18next";
-import money from "../assets/money.jpg";
-import bitcoin from "../assets/bitcoin.jpg";
-import cubs from "../assets/cubs.jpg";
+import money from "../assets/cubs.jpg";
+import bitcoin from "../assets/money.jpg";
+import cubs from "../assets/hero.png";
 import ceo from "../assets/ceo.jpg";
 
 const BusinessFinanceTraining = () => {
@@ -145,9 +145,7 @@ const BusinessFinanceTraining = () => {
 
             {/* Left Section */}
             <div className="order-1 md:order-2 ">
-              <h4 className="text-md mb-2 text-yellow-500">
-                {t("ceo_message.subtitle")}
-              </h4>
+              
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
                 {" "}
                 {t("ceo_message.title")}

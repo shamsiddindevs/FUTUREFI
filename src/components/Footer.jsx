@@ -81,9 +81,6 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 border-t pt-5 text-center text-gray-600">
-        <p>{
-            t("footer.address")
-            }: {t("footer.location")}            </p>
         <p>&copy; 2025 FUTUREFI Network</p>
       </div>
     </footer>

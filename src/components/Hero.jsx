@@ -5,7 +5,7 @@ import {getSwaggerData} from "./apiServer";
 import CountUp from "react-countup";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
-import hero from "../assets/hero.png";
+import hero from "../assets/bitcoin.jpg";
 
 const Hero = () => {
   const {t} = useTranslation();
@@ -51,9 +51,9 @@ const Hero = () => {
       id="hero"
       className=" min-h-screen flex  items-center justify-center ">
       <div className="container w-full mx-auto max-w-[1320px] px-5 isolate  ">
-        <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20">
-          <div className=" flex flex-col gap-4">
-            <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5">
+        <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20 pt-20 md:pt-0 ">
+          <div className=" flex-1 flex flex-col gap-4">
+            <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5 ">
               {t("hero.title")} <br />{" "}
               <span
                 ref={el}
@@ -105,7 +105,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className=" ">
+          <div className=" flex-1">
             <img
               src={hero}
               alt="hero image"
