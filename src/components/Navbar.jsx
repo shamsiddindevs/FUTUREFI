@@ -213,12 +213,12 @@ const Navbar = () => {
               className="nav_link">
               {t("nav.about")}
             </HashLink>
-            <Link
+            <HashLink
             onClick={() => setOverlay(!overlay)}
-              to={"/classes"}
+              to={"/classes/#"}
               className="nav_link">
               {t("nav.online_classes")}
-            </Link>
+            </HashLink>
             <HashLink
             onClick={() => setOverlay(!overlay)}
               className="nav_link"
