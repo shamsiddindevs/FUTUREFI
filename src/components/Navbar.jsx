@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {Link} from "react-router-dom";
 import logo from "../assets/logo.png";
 import uzb from "../assets/uzb.png";
 import eng from "../assets/eng.png";
@@ -36,7 +35,7 @@ const Navbar = () => {
               to={"/#"}
               className="flex items-center gap-1">
               <img
-              loading="lazy" 
+                loading="lazy"
                 src={logo}
                 alt="header logo image"
                 className=" h-12  object-cover"
@@ -201,32 +200,32 @@ const Navbar = () => {
             X
           </div>
           <div className="flex py-12 flex-col gap-1">
-            <Link
+            <HashLink
               onClick={() => setOverlay(!overlay)}
-              href="/"
+              href="/#"
               className="nav_link">
               {t("nav.home")}
-            </Link>
+            </HashLink>
             <HashLink
-            onClick={() => setOverlay(!overlay)}
+              onClick={() => setOverlay(!overlay)}
               to="/#about"
               className="nav_link">
               {t("nav.about")}
             </HashLink>
             <HashLink
-            onClick={() => setOverlay(!overlay)}
+              onClick={() => setOverlay(!overlay)}
               to={"/classes/#"}
               className="nav_link">
               {t("nav.online_classes")}
             </HashLink>
             <HashLink
-            onClick={() => setOverlay(!overlay)}
+              onClick={() => setOverlay(!overlay)}
               className="nav_link"
               to={"/courseIntro"}>
               {t("nav.online_courses")}
             </HashLink>
             <HashLink
-            onClick={() => setOverlay(!overlay)}
+              onClick={() => setOverlay(!overlay)}
               to="/#contact"
               className="nav_link">
               {t("nav.contact")}
