@@ -10,6 +10,8 @@ const ContactForm = () => {
     name: "",
     email: "",
     message: "",
+    subject: "Feedback",
+    rate: 5,
   });
 
   const handleChange = (e) => {
@@ -21,11 +23,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = "7457301252:AAGAH2V943ZyZujcSybmXdiZRblWmomr_Bg";
-    const chatId = "-1002280372570";
-    const text = `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const url = `https://mission.uz/en/api/v1/feedbacks/`;
 
     try {
       const response = await fetch(url, {
@@ -34,8 +32,11 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_id: chatId,
-          text: text,
+          name: formData.name,
+          rate: formData.rate,
+          email:formData.email,
+          subject:formData.subject,
+          message: formData.message,
         }),
       });
 
@@ -48,7 +49,7 @@ const ContactForm = () => {
             fontSize: "20px",
           },
         });
-        setFormData({name: "", email: "", message: ""});
+        setFormData({name: "", email: "", message: "",subject:"Feedback" , rate: 5});
       } else {
         toast.warn("Failed to send message.", {
           style: {
@@ -114,7 +115,9 @@ const ContactForm = () => {
                 placeholder={t("contact.email")}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
+              
               <textarea
+              required
                 name="message"
                 value={formData.message}
                 onChange={handleChange}

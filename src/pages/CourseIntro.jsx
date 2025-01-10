@@ -7,7 +7,7 @@ const CourseIntro = () => {
   const [modules, setModules] = useState([]);
 
   useEffect(() => {
-    getSwaggerData('moduls/').then((data) => {
+    getSwaggerData("moduls/").then((data) => {
       setModules(data.map((module) => ({...module, expanded: false})));
       console.log(data);
     });
@@ -54,18 +54,19 @@ const CourseIntro = () => {
                   alt={module.title}
                   className="w-48 rounded-xl object-cover"
                 />
-                <div className="flex flex-col gap-2">
-                  <p>
-                    <strong>Title:</strong> {module.title}
-                  </p>
-                  <p>
-                    <strong>Description:</strong> {module.description}
-                  </p>
-                  <p>
-                    <strong>Videos:</strong> {module.videos_count}
-                  </p>
-                  <div className="flex items-end justify-between">
+                <div className="flex flex-col gap-10">
+                  <div>
+                    <h2 className="card-title text-2xl font-bold mb-2">
+                      {module.name}
+                    </h2>
+                    <p className="text-gray-600">{module.description}</p>
+                  </div>
+
+                  <div className="flex items-end justify-between gap-10">
                     <div className="flex flex-col gap-2">
+                      <p>
+                        <strong>Videos:</strong> {module.videos_count}
+                      </p>
                       <p>
                         <strong>Questions:</strong>
                         {module.questions_count}
