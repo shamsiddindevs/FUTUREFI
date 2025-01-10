@@ -37,6 +37,7 @@ const BusinessFinanceTraining = () => {
                 </svg>
               </div> */}
               <img
+              loading="lazy" 
                 src={money}
                 alt="money finance "
                 className=" object-cover object-center flex-1"
@@ -56,6 +57,7 @@ const BusinessFinanceTraining = () => {
             {/* Right Section (Image) */}
             <div className="order-2 md:order-1  flex justify-start  ">
               <img
+              loading="lazy" 
                 src={bitcoin}
                 alt="money finance "
               />
@@ -103,6 +105,7 @@ const BusinessFinanceTraining = () => {
             {/* Right Section (Image) */}
             <div className=" flex md:justify-end ">
               <img
+              loading="lazy" 
                 src={cubs}
                 alt="cubs money"
               />
@@ -130,7 +133,7 @@ const BusinessFinanceTraining = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center  lg:gap-6 gap-10  ">
             {/* Right Section (Image) */}
             <div className="order-2 md:order-1 flex justify-start overflow-hidden">
-              <img src={ceo} className="h-full w-[250px] object-cover mx-auto shadow-2xl rounded-2xl" alt=" ceo of company" />
+              <img src={ceo} loading="lazy"  className="h-full w-[250px] object-cover mx-auto shadow-2xl rounded-2xl" alt=" ceo of company" />
               {/* <div className=" skeleton flex items-center justify-center w-full h-60 bg-gray-300 rounded sm:w-96 ">
                 <svg
                   className="w-12 h-12 text-gray-200  me-4"

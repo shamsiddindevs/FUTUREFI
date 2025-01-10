@@ -107,6 +107,7 @@ const Hero = () => {
           </div>
           <div className=" flex-1">
             <img
+            loading="lazy" 
               src={hero}
               alt="hero image"
               className="rounded-3xl skeleton object-cover "

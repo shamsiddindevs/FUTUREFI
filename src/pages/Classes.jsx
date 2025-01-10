@@ -92,6 +92,7 @@ const Classes = () => {
                 {/* Right Section (Image) */}
                 <div className="order-2 md:order-1 flex-1  flex justify-start lg:p-10 ">
                   <img
+                  loading="lazy" 
                     src={bitcoin}
                     alt="money finance "
                   />
@@ -129,6 +130,7 @@ const Classes = () => {
                 {/* Right Section (Image) */}
                 <div className=" flex md:justify-end lg:p-10 ">
                   <img
+                  loading="lazy" 
                     src={cubs}
                     alt="cubs money"
                   />

@@ -36,6 +36,7 @@ const Navbar = () => {
               to={"/#"}
               className="flex items-center gap-1">
               <img
+              loading="lazy" 
                 src={logo}
                 alt="header logo image"
                 className=" h-12  object-cover"

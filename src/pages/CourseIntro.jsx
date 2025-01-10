@@ -50,6 +50,7 @@ const CourseIntro = () => {
             {module.expanded && (
               <div className="mt-4 flex gap-10 items-center flex-wrap ">
                 <img
+                loading="lazy" 
                   src={module.image || "https://picsum.photos/200/300"}
                   alt={module.title}
                   className="w-48 rounded-xl object-cover"

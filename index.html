@@ -1,19 +1,105 @@
-<!doctype html>
-<html lang="en" data-theme="light">
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="light">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTUREFI Network</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>FUTUREFI Network | Empowering Financial Freedom</title>
+    <meta
+      name="description"
+      content="FUTUREFI Network provides cutting-edge financial education and tools to help you achieve financial freedom." />
+    <meta
+      name="keywords"
+      content="Financial Freedom, Personal Finance, Investing Tools, Wealth Management, Financial Education, Passive Income, Budgeting, Fintech Solutions, Online Financial Courses, Money Management, Investment Strategies, Financial Planning, Savings Tips, Economic Independence, Financial Literacy" />
+
+    <meta
+      name="author"
+      content="FUTUREFI Network Team" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="favicon.ico"
+      type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="FUTUREFI Network | Empowering Financial Freedom" />
+    <meta
+      property="og:description"
+      content="FUTUREFI Network provides cutting-edge financial education and tools to help you achieve financial freedom." />
+    <meta
+      property="og:image"
+      content="https://example.com/preview-image.jpg" />
+    <meta
+      property="og:url"
+      content="https://www.futurefi.com" />
+    <meta
+      property="og:type"
+      content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="FUTUREFI Network | Empowering Financial Freedom" />
+    <meta
+      name="twitter:description"
+      content="FUTUREFI Network provides cutting-edge financial education and tools to help you achieve financial freedom." />
+    <meta
+      name="twitter:image"
+      content="https://example.com/preview-image.jpg" />
+    <meta
+      name="twitter:site"
+      content="@futurefi" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://www.futurefi.com" />
+
+    <!-- Robots (Indexing Rules) -->
+    <meta
+      name="robots"
+      content="index, follow" />
+
+    <!-- Structured Data (JSON-LD for SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FUTUREFI Network",
+        "url": "https://www.futurefi.com",
+        "logo": "https://example.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/futurefi",
+          "https://www.twitter.com/futurefi",
+          "https://www.instagram.com/futurefi"
+        ]
+      }
+    </script>
+
+    <!-- JavaScript for Language Management -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const language = localStorage.getItem('language') || 'en';
+      document.addEventListener("DOMContentLoaded", () => {
+        const language = localStorage.getItem("language") || "en";
         document.documentElement.lang = language;
       });
     </script>
   </head>
+
   <body>
+    <!-- Main React Application Entry Point -->
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="module"
+      src="/src/main.jsx"></script>
   </body>
 </html>
