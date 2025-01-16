@@ -8,6 +8,7 @@ import {
   
 } from "react-icons/fa";
 import {getSwaggerData} from "../components/apiServer";
+import { t } from "i18next";
 
 const CourseIntro = () => {
   const [modules, setModules] = useState([]);
@@ -37,15 +38,15 @@ const CourseIntro = () => {
         }}>
         <div className="container max-w-[1320px] mx-auto px-5 ">
           <h1 className="text-5xl  font-semibold mt-20 pt-32 pb-48  text-white ">
-            Course Modules
+           {t("course.title")}
           </h1>
         </div>
       </section>
 
       <section className="py-10 bg-slate-100">
         <div className="w-full max-w-[1320px] mx-auto px-5">
-          <h2 className="text-4xl py-6 font-bold">Welcome back!</h2>
-          <h3 className="text-4xl py-6 font-bold text-center">Course Modules</h3>
+          <h2 className="text-4xl py-6 font-bold"> {t("course.left")}</h2>
+          <h3 className="text-4xl py-6 font-bold text-center"> {t("course.center")}</h3>
       
           <div className=" bg-gray-100">
             {modules.map((module) => (

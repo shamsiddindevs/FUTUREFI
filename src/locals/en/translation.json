@@ -74,5 +74,39 @@
     "documents": "Social Links",
     "address": "Address",
     "location": "5 House, Yunusobod district, Tashkent city"
+  },
+  "class":{
+    "title": "Welcome to FutureFi Network’s Online Classes",
+    "button": "Sign Up",
+    "overview":"Overview",
+    "overview_title":"Our classes",
+    "overview_description":"Our online classes, delivered via Zoom, offer a structured and interactive learning experience tailored to different skill levels. With unique content separate from our videos, each class series challenges and supports learners as they build their financial knowledge. Upon completion of a series, participants can continue expanding their skills by moving on to other classes or video sets.",
+    "overview_how":"How Do Classes Work?",
+    "overview_ans":[" Choose a class series that interests you. ","Join 10-15 interactive sessions held at scheduled times.","Learn with peers and ask questions during live discussions.","Take a test at the end of the series. ","Sign up for the next series/video sets!"]
+  },
+  "classTeach":{
+    "sub":"Our courses",
+    "title":"What we teach",
+    "data":[
+      {"title":"Personal Finance Advanced",
+    "description":"Take your financial knowledge to the next level with more advanced topics. After this series, you'll be equipped to master your finances and grow your wealth!"},
+      {"title":"Corporate Finance Beginner ",
+    "description":"Learn the fundamentals of corporate finance, including the time value of money, capital budgeting, and essential concepts to build a strong foundation in the finance world."},
+   {"title":"Finance Advanced",
+    "description":"Master advanced concepts in corporate finance, such as capital structure, valuation, and risk management, to excel in strategic financial decision-making."},
+   {"title":"Accounting Beginner",
+    "description":"Build a solid foundation in accounting by learning essential concepts like financial statements, recording transactions, and basic financial analysis."},
+    {"title":"Accounting Advanced",
+    "description":"Advance your accounting knowledge with in-depth topics like financial reporting, auditing, and complex financial analysis to enhance decision-making skills."},
+    {"title":"Career Exploration",
+    "description":"We believe in preparing for your career from a young age because it’s important to know where you’re headed. That’s why we created this series—to explore all the different career paths in finance and provide an in-depth understanding of each one."}
+    ]
+
+  },
+  "course":{
+    "title":"Course Modules",
+    "left":"Welcome back!",
+    "center":"Course Modules"
   }
+
 }

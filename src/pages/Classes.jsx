@@ -11,7 +11,11 @@ import {
 } from "react-icons/fa";
 import {BiBarChartAlt, BiLineChart} from "react-icons/bi";
 import {MdDesignServices} from "react-icons/md";
-import { Banner } from "../components/Banner";
+import {Banner} from "../components/Banner";
+import { FaComputer, } from "react-icons/fa6";
+import clas1 from "../assets/class.jpg";
+import clas from "../assets/class1.jpg";
+
 
 const Classes = () => {
   const {t} = useTranslation();
@@ -94,144 +98,152 @@ const Classes = () => {
     "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
     "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
   ].map((image) => ({
     id: crypto.randomUUID(),
-    image
+    image,
   }));
+
+  const courseData = [
+    {
+      icon: <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.0.title"),
+      description:
+      t("classTeach.data.0.description"),
+      borderColor: "border-blue-200",
+    },
+    {
+      icon: <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.1.title"),
+      description:
+      t("classTeach.data.1.description"),
+      borderColor: "border-orange-200",
+    },
+    {
+      icon: (
+        <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
+      ),
+      title: t("classTeach.data.2.title"),
+      description:
+      t("classTeach.data.2.description"),
+      borderColor: "border-green-200",
+    },
+    {
+      icon: <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.3.title"),
+      description:
+      t("classTeach.data.3.description"),
+      borderColor: "border-blue-200",
+    },
+    {
+      icon: <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.4.title"),
+      description:
+      t("classTeach.data.4.description"),
+      borderColor: "border-orange-200",
+    },
+    {
+      icon: (
+        <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
+      ),
+      title: t("classTeach.data.5.title"),
+      description:
+      t("classTeach.data.5.description"),
+      borderColor: "border-green-200",
+    },
+  ];
+
+  const howClass = [
+    {icon: FaChalkboardTeacher, text: t("class.overview_ans.0")},
+    {icon: FaDownload, text: t("class.overview_ans.1")},
+    {
+      icon: FaComments,
+      text: t("class.overview_ans.2")
+    },
+    {icon: FaMobileAlt, text: t("class.overview_ans.3")},
+    {icon: FaComputer, text: t("class.overview_ans.4")}
+  ];
 
   return (
     <>
-      <section className="pb-20" >
-        <div className=" px-5 text-center min-h-screen flex justify-center items-center flex-col gap-5 bg-slate-200">
-          <h1 className="text-[40px]  font-semibold lg:font-bold leading-[50px] lg:text-[60px] lg:leading-[65px] my-20  ">
-            Welcome to FutureFi Network’s <br /> Online Classes
+      <section className="pb-20">
+        <div className=" px-5 text-center min-h-screen flex justify-center items-center flex-col gap-5 " style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.733), rgba(0, 0, 0, 0.519) ), url(${clas})`,backgroundSize:"cover"}}>
+          <h1 className="text-[40px]  font-semibold lg:font-bold leading-[50px] lg:text-[60px] lg:leading-[65px] my-20  max-w-[1050px] text-yellow-300">
+            {t("class.title")}
           </h1>
           <HashLink
             to="#contact"
             className="border border-yellow-500 border-spacing-2 font-bold  transition-colors  bg-yellow-500   hover:opacity-80  text-white  py-2.5 rounded-md px-8  text-xl">
-            Sign Up
+           {t("class.button")}
           </HashLink>
         </div>
 
         <section className="py-20 bg-green-50">
-        <div className="container mx-auto max-w-[1320px] px-5 ">
-         
+          <div className="container mx-auto max-w-[1320px] px-5 ">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-20  mb-40 ">
               {/* Offerings Section */}
               <div className="flex-1">
                 <h2 className="text-lg font-semibold text-green-600">
-                  Overview
+                  {t("class.overview")}
                 </h2>
                 <h1 className="text-4xl font-bold text-gray-800 mb-5">
-                  Our classes
+                  {t("class.overview_title")}
                 </h1>
                 <p className="text-gray-600">
-                Our online classes, delivered via Zoom, offer a structured and interactive learning experience tailored to different skill levels. With unique content separate from our videos, each class series challenges and supports learners as they build their financial knowledge. Upon completion of a series, participants can continue expanding their skills by moving on to other classes or video sets.
+                  {t("class.overview_description")}
                 </p>
               </div>
-              <div className=" flex-1 grid  lg:grid-cols-1  gap-6">
-                <div className="flex items-center bg-gray-100 p-4 rounded-lg">
-                  <FaChalkboardTeacher className="text-green-600 text-5xl mr-4 p-2 bg-green-100 rounded-full " />
-                  <span className="text-gray-800 font-medium">
-                    500+ High Quality Lessons
-                  </span>
+                <div className="flex-1 grid gap-6">
+                  <h3 className="text-2xl font-semibold">{t("class.overview_how")}</h3>
+                  {howClass.map(
+                    ({icon: Icon, text, bgColor = "bg-green-100"}, index) => (
+                      <div
+                        key={index}
+                        className={`flex items-center bg-white p-4 rounded-lg`}>
+                        <Icon
+                          className={`text-green-600 text-5xl mr-4 p-2 ${bgColor} rounded-full`}
+                        />
+                        <span className="text-gray-800 font-medium">
+                          {text}
+                        </span>
+                      </div>
+                    )
+                  )}
                 </div>
-                <div className="flex items-center bg-gray-100 p-4 rounded-lg">
-                  <FaDownload className="text-green-600 text-5xl mr-4 p-2 bg-green-100 rounded-full " />
-                  <span className="text-gray-800 font-medium">
-                    Downloadable Templates, Guides, and Resources
-                  </span>
-                </div>
-                <div className="flex items-center bg-white p-4 rounded-lg">
-                  <FaComments className="text-green-600 text-5xl mr-4 p-2 bg-green-100 rounded-full " />
-                  <span className="text-gray-800 font-medium">
-                    Ask Instructors Anything With the Discussion Forum
-                  </span>
-                </div>
-                <div className="flex items-center bg-gray-100 p-4 rounded-lg">
-                  <FaMobileAlt className="text-green-600 text-5xl mr-4 p-2 bg-green-200 rounded-full " />
-                  <span className="text-gray-800 font-medium">
-                    Access on Any Device
-                  </span>
-                </div>
-              </div>
             </div>
 
             {/* Courses Section */}
             <div className="space-y-6 ">
               <h2 className="text-lg font-semibold text-blue-600">
-                Our courses
+               {t("classTeach.sub")}
               </h2>
               <h1 className="text-4xl font-bold text-gray-800">
-                What we teach
+              {t("classTeach.title")}
               </h1>
               <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  ">
-                <div className="bg-white border border-blue-200 shadow-lg rounded-lg p-10 text-center">
-                  <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                  Personal Finance Advanced
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                  Take your financial knowledge to the next level with more advanced topics. After this series, you will be equipped to master your finances and grow your wealth!
-                  </p>
-                </div>
-                <div className="bg-white border border-orange-200 shadow-lg rounded-lg p-6 text-center">
-                  <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                  Corporate Finance Beginner 
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                  Learn the fundamentals of corporate finance, including the time value of money, capital budgeting, and essential concepts to build a strong foundation in the <br /> finance world.
-                  </p>
-                </div>
-                <div className="bg-white border border-green-200 shadow-lg rounded-lg p-6 text-center">
-                  <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Slide Design
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                    Design professional PowerPoint slides using custom themes
-                  </p>
-                </div>
-                <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                  <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Data Visualization
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                    Make professional charts, visuals, and dashboards
-                  </p>
-                </div>
-                <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                  <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Financial Modelling
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                    Build industry-standard valuation models on Excel
-                  </p>
-                </div>
-                <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                  <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Slide Design
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                    Design professional PowerPoint slides using custom themes
-                  </p>
-                </div>
+                {courseData.map((course, index) => (
+                  <div
+                    key={index}
+                    className={`bg-white border ${course.borderColor} shadow-lg rounded-lg p-6 text-center`}>
+                    {course.icon}
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {course.title}
+                    </h3>
+                    <p className="text-gray-600 mt-2">{course.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-      
         </section>
 
-
         <div className="py-28 bg-white">
-        <Banner images={images} speed={10000} />
+          <Banner
+            images={images}
+            speed={10000}
+          />
         </div>
-       
+
         <div
           id="contact"
           className="px-5 flex items-center justify-center ">
