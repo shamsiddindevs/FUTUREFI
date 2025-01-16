@@ -166,7 +166,7 @@ const Classes = () => {
   return (
     <>
       <section className="pb-20">
-        <div className=" px-5 text-center min-h-screen flex justify-center items-center flex-col gap-5 " style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.733), rgba(0, 0, 0, 0.519) ), url(${clas})`,backgroundSize:"cover"}}>
+        <div className=" px-5 text-center min-h-screen flex justify-center items-center flex-col gap-5 " style={{backgroundImage: `linear-gradient(rgba(133, 255, 184, 0.89), rgba(0, 0, 0, 0.87) ), url(${clas})`,backgroundSize:"cover"}}>
           <h1 className="text-[40px]  font-semibold lg:font-bold leading-[50px] lg:text-[60px] lg:leading-[65px] my-20  max-w-[1050px] text-yellow-300">
             {t("class.title")}
           </h1>
