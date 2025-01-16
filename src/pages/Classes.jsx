@@ -13,7 +13,6 @@ import {BiBarChartAlt, BiLineChart} from "react-icons/bi";
 import {MdDesignServices} from "react-icons/md";
 import {Banner} from "../components/Banner";
 import { FaComputer, } from "react-icons/fa6";
-import clas1 from "../assets/class.jpg";
 import clas from "../assets/class1.jpg";
 
 
