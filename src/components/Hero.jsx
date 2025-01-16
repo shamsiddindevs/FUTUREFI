@@ -49,18 +49,18 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className=" min-h-screen flex  items-center justify-center ">
-      <div className="container w-full mx-auto max-w-[1320px] px-5 isolate  ">
+      className=" flex  items-center justify-center ">
+      <div className="container w-full mx-auto max-w-[1320px] px-5 isolate  mt-[148px]">
         <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20 pt-20 md:pt-0 ">
           <div className=" flex-1 flex flex-col gap-4">
-            <h1 className="text-[40px]  font-semibold leading-[50px] lg:text-[45px] lg:leading-[50px] my-5 ">
+            <h1 className="text-[40px]  font-semibold lg:font-bold leading-[50px] lg:text-[60px] lg:leading-[65px] my-5 ">
               {t("hero.title")} <br />{" "}
               <span
                 ref={el}
-                className="text-yellow-500 min-w-[500px]"></span>
+                className="text-yellow-500 min-w-[500px] text-[50px]"></span>
             </h1>
-            <p>{t("hero.info")}</p>
-            <div className="btn_group   flex gap-2  flex-wrap">
+            <p className="lg:text-xl mb-5">{t("hero.info")}</p>
+            <div className="btn_group   flex gap-2  flex-wrap mb-5">
               <Link
                 to="/courseIntro"
                 className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  btn_text">
@@ -73,7 +73,7 @@ const Hero = () => {
               </HashLink>
             </div>
             <div className=" flex gap-10">
-              <div className="">
+              <div className=" font-semibold">
                 <CountUp
                   className="text-[30px] font-medium"
                   start={0}
@@ -81,9 +81,9 @@ const Hero = () => {
                   duration={3}
                   separator=","
                 />
-                <p className="text-md">{t("hero.count.module")}</p>
+                <p className="text-lg">{t("hero.count.module")}</p>
               </div>
-              <div className="">
+              <div className=" font-semibold">
                 <CountUp
                   className="text-[30px] font-medium"
                   start={0}
@@ -91,9 +91,9 @@ const Hero = () => {
                   duration={3}
                   separator=","
                 />
-                <p className="text-md"> {t("hero.count.lesson")} </p>
+                <p className="text-lg"> {t("hero.count.lesson")} </p>
               </div>
-              <div className="">
+              <div className=" font-semibold">
                 <CountUp
                   className="text-[30px] font-medium"
                   start={0}
@@ -101,7 +101,7 @@ const Hero = () => {
                   duration={3}
                   separator=","
                 />
-                <p className="text-md">{t("hero.count.view")}</p>
+                <p className="text-lg">{t("hero.count.view")}</p>
               </div>
             </div>
           </div>

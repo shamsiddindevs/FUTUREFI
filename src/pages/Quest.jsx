@@ -1,93 +1,100 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import Modal from "../components/Modal";
+// App.js
+import  { useState } from "react";
 
 const Quiz = () => {
-  const { id } = useParams();
-  const [questions, setQuestions] = useState([]);
+  const questions = [
+    {
+      question: "Each financial decision you make involves trade-offs between ______ you and ______ you.",
+      options: ["Past and future", "Present and past", "Present and future"],
+      correct: "Present and future",
+      explanation:
+        "Each financial decision involves trade-offs between your present and future selves. Spending today can affect your future savings.",
+    },
+    {
+      question:
+        "Dorothy starts investing at age 15, putting aside $100 per month until she is 25. Alex starts investing at age 30. Who is better prepared for retirement?",
+      options: ["Dorothy", "Alex", "They would be equally prepared"],
+      correct: "Dorothy",
+      explanation:
+        "Dorothy is better prepared because she benefits from compounding. Starting earlier allows her investments to grow more over time.",
+    },
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [score, setScore] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [result, setResult] = useState(null);
 
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        const response = await axios.get(`https://mission.uz/en/api/v1/modul/${id}/`);
-        setQuestions(response.data.questions);
-      } catch (error) {
-        console.error("Error fetching questions:", error);
-      }
-    };
-
-    fetchQuestions();
-  }, [id]);
-
-  const handleAnswerSelection = (answer) => {
-    setSelectedAnswer(answer);
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
   };
 
-  const handleNextQuestion = () => {
-    if (selectedAnswer === questions[currentQuestion].correctAnswer) {
-      setScore(score + 1);
+  const handleSubmit = () => {
+    if (!selectedOption) {
+      setResult("Please select an answer.");
+      return;
     }
-    setSelectedAnswer(null);
-    if (currentQuestion + 1 < questions.length) {
+
+    const isCorrect = selectedOption === questions[currentQuestion].correct;
+    setResult(
+      isCorrect
+        ? `Correct! ${questions[currentQuestion].explanation}`
+        : `Incorrect. ${questions[currentQuestion].explanation}`
+    );
+  };
+
+  const handleNext = () => {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowModal(true);
+      setSelectedOption(null);
+      setResult(null);
     }
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setCurrentQuestion(0);
-    setScore(0);
   };
 
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1440/980')" }}>
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
-      <div className="relative flex items-center justify-center w-full h-full">
-        <div className="quiz-container p-4 bg-slate-200 rounded-lg w-96">
-          {questions.length > 0 && (
-            <>
-              <h2>{questions[currentQuestion].name}</h2>
-              <ul className="mb-2">
-                {questions[currentQuestion].options.map((option, index) => (
-                  <li key={index}>
-                    <label className="label flex justify-start gap-3 items-center">
-                      <input
-                        type="radio"
-                        name="answer"
-                        className="radio radio-primary radio-sm"
-                        value={option.name}
-                        onChange={() => handleAnswerSelection(option.name)}
-                        checked={selectedAnswer === option.name}
-                      />
-                      {option.name}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={handleNextQuestion}
-                className="btn btn-primary btn-sm">
-                Next
-              </button>
-            </>
-          )}
-          <Modal
-            show={showModal}
-            onClose={handleCloseModal}
-            score={score}
-            totalQuestions={questions.length}
-          />
+    <div className="flex justify-center items-center h-full bg-gray-100">
+      <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-md ">
+        <h2 className="text-lg font-bold mb-4">
+          Question {currentQuestion + 1}/{questions.length}
+        </h2>
+        <p className="mb-4">{questions[currentQuestion].question}</p>
+        <div className="flex flex-col gap-2">
+          {questions[currentQuestion].options.map((option) => (
+            <label key={option} className="cursor-pointer flex items-center">
+              <input
+                type="radio"
+                name="option"
+                value={option}
+                className="radio radio-primary mr-2"
+                checked={selectedOption === option}
+                onChange={() => handleOptionChange(option)}
+              />
+              {option}
+            </label>
+          ))}
         </div>
+        <button
+          className="btn btn-primary mt-4 w-full"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+        {result && (
+          <div className="mt-4 p-2 rounded-md text-white bg-gray-800">
+            {result}
+          </div>
+        )}
+        {result && currentQuestion < questions.length - 1 && (
+          <button
+            className="btn btn-secondary mt-4 w-full"
+            onClick={handleNext}
+          >
+            Next Question
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
 export default Quiz;
+

@@ -1,8 +1,8 @@
 import {
   FaTelegramPlane,
-  FaInstagram,
+
   FaYoutube,
-  FaFacebookF,
+
 } from "react-icons/fa";
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
@@ -57,12 +57,12 @@ Network Logo"
 
         {/* Right Section */}
         <div className="">
-          <h3 className="font-semibold text-lg mb-2">Social Links</h3>
+          <h3 className="font-semibold text-lg mb-2"> {t("footer.documents")} </h3>
           <div className="flex gap-6 mt-6 text-lg">
             <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
-            <FaInstagram className="text-gray-500 hover:text-pink-500 cursor-pointer" />
+          
             <FaYoutube className="text-gray-500 hover:text-red-500 cursor-pointer" />
-            <FaFacebookF className="text-gray-500 hover:text-blue-600 cursor-pointer" />
+           
           </div>
         </div>
       </div>

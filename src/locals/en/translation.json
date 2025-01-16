@@ -36,7 +36,7 @@
   },
   "ceo_message": {
     "subtitle": "Online, at your own pace",
-    "title": "CEO of FutureFi Network",
+    "title": "Founder of FutureFi Network",
     "info": "Hello, I’m Abdulaziz, but everyone calls me Aziz. I’ve been passionate about finance since childhood, but learning about it often felt overwhelming. That inspired me to create FutureFi Network—a platform to make financial education accessible and stress-free for anyone eager to learn. My goal is to equip learners with essential financial skills and shape a financially literate generation. I have studied at Leader School in Tashkent, CATS Academy in Boston, and currently, I attend Pomfret School in the USA. I’m also passionate about chess and basketball, and I’m proud to call Tashkent, Uzbekistan, my home."
   },
   "what_we_offer": {
@@ -70,8 +70,8 @@
     "call_center": "Call Center",
     "company": "Company",
     "company_names": ["Courses", "Events", "About Us", "Main"],
-
-    "documents": "State-approved documents",
+     
+    "documents": "Social Links",
     "address": "Address",
     "location": "5 House, Yunusobod district, Tashkent city"
   }

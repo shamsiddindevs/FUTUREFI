@@ -1,0 +1,48 @@
+.wrapper img {
+    max-width: 300px;
+    height: 10rem;
+    padding: 0 15px;
+    object-fit: cover;
+  }
+  
+  .wrapper img:last-of-type {
+    padding-left: 0;
+
+  }
+  
+  .inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 10rem;
+    position: relative;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  }
+  
+  .wrapper {
+    position: absolute;
+    display: flex;
+  }
+  
+  .section {
+    display: flex;
+    animation: swipe var(--speed) linear infinite backwards;
+
+  }
+  
+  @keyframes swipe {
+    0% {
+      transform: translate(0);
+    }
+  
+    100% {
+      transform: translate(-100%);
+    }
+  }
+  
