@@ -35,11 +35,12 @@ const Classes = () => {
 
   const [categories, setCategories] = useState([]);
 
+  const en = localStorage.getItem('language')
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "https://mission.uz/en/api/v1/appeal-categories/"
+          `https://mission.uz/${en}/api/v1/appeal-categories/`
         );
         const data = await response.json();
         setCategories(data);
@@ -247,9 +248,9 @@ const Classes = () => {
           id="contact"
           className="px-5 flex items-center justify-center ">
           <div className="w-full max-w-lg bg-white border border-yellow-200 rounded-lg shadow-lg p-8 ">
-            <div className="text-center mb-6">
-              <h1 className="text-lg md:text-xl lg:text-2xl font-bold bg-yellow-500 text-white rounded-lg py-3">
-                Tell Us What You Think
+            <div className="text-center mb-6 bg-yellow-500 rounded-lg px-5  py-3">
+              <h1 className="text-lg md:text-xl lg:text-2xl font-bold  text-white ">
+            {t("classContact.formTitle")}
               </h1>
             </div>
             <form
@@ -258,7 +259,7 @@ const Classes = () => {
               {/* Name Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Name
+                  {t("classContact.fields.name.label")}
                 </label>
                 <input
                   required
@@ -266,7 +267,7 @@ const Classes = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Name"
+                  placeholder={t("classContact.fields.name.placeholder")}
                   className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
                 />
               </div>
@@ -274,7 +275,7 @@ const Classes = () => {
               {/* Email Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Email
+                {t("classContact.fields.email.label")}
                 </label>
                 <input
                   required
@@ -282,7 +283,7 @@ const Classes = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="example@example.com"
+                  placeholder={t("classContact.fields.email.placeholder")}
                   className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
                 />
               </div>
@@ -290,13 +291,13 @@ const Classes = () => {
               {/* Age Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Age
+                {t("classContact.fields.age.label")}
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   name="age"
                   value={formData.age}
-                  placeholder="Age"
+                  placeholder={t("classContact.fields.age.placeholder")}
                   onChange={handleInputChange}
                   className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
                 />
@@ -305,7 +306,7 @@ const Classes = () => {
               {/* Grade Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Grade
+                {t("classContact.fields.schoolClass.label")}
                 </label>
                 <input
                   required
@@ -313,7 +314,7 @@ const Classes = () => {
                   name="grade"
                   value={formData.grade}
                   onChange={handleInputChange}
-                  placeholder="Grade"
+                  placeholder={t("classContact.fields.schoolClass.placeholder")}
                   className="input input-bordered focus:outline-none focus:ring-2 focus:ring-yellow-400  w-full"
                 />
               </div>
@@ -321,7 +322,7 @@ const Classes = () => {
               {/* Category Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Class
+                {t("classContact.fields.courseSelection.label")}
                 </label>
                 <select
                   required
@@ -332,7 +333,7 @@ const Classes = () => {
                   <option
                     value=""
                     disabled>
-                    Select a class
+                    {t("classContact.fields.courseSelection.placeholder")}
                   </option>
                   {categories.map((category) => (
                     <option
@@ -347,63 +348,41 @@ const Classes = () => {
               {/* Text Box One Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Briefly describe your experience with finance(if any).
+                {t("classContact.fields.experience.label")}
                 </label>
                 <textarea
                   name="text_box_one"
                   value={formData.text_box_one}
                   onChange={handleInputChange}
-                  placeholder="Type here..."
+                  placeholder= {t("classContact.fields.experience.placeholder")}
                   className="w-full p-4 rounded-lg border border-gray-300 "></textarea>
               </div>
 
               {/* Text Box Two Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  What do you hope to learn from this class series?
+                {t("classContact.fields.expectations.label")}
                 </label>
                 <textarea
                   name="text_box_two"
                   value={formData.text_box_two}
                   onChange={handleInputChange}
-                  placeholder="Type here..."
+                  placeholder= {t("classContact.fields.expectations.placeholder")}
                   className="w-full p-4 rounded-lg border border-gray-300"></textarea>
               </div>
 
-              {/* Text Box Three Section */}
-              <div>
-                <label className="font-normal block mb-3 text-slate-500">
-                  Attendance Policy: Participants who miss more than two
-                  sessions without a valid excuse will not qualify for the
-                  certificate. In such cases, the class series must be retaken
-                  to earn certification.
-                </label>
-                {/* Check Box Section */}
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="check_box"
-                    checked={formData.check_box}
-                    onChange={handleInputChange}
-                    className="mr-2 checkbox  checkbox-warning "
-                  />
-                  <label className="font-normal block text-yellow-500">
-                    I agree to participate actively and follow the class
-                    guidelines.
-                  </label>
-                </div>
-              </div>
+             
 
               {/* Text Box Three Section */}
               <div>
                 <label className="font-normal block mb-3 text-yellow-500">
-                  Is there anything else we should know?
+                {t("classContact.fields.additionalInfo.label")}
                 </label>
                 <textarea
                   name="text_box_three"
                   value={formData.text_box_three}
                   onChange={handleInputChange}
-                  placeholder="Type here..."
+                  placeholder= {t("classContact.fields.additionalInfo.placeholder")}
                   className="w-full p-4 rounded-lg border border-gray-300"></textarea>
               </div>
 
@@ -412,7 +391,7 @@ const Classes = () => {
                 <button
                   type="submit"
                   className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
-                  Submit
+                   {t("classContact.submitButton")}
                 </button>
               </div>
             </form>

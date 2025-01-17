@@ -32,14 +32,14 @@ Network Logo"
           </Link>
           <p className="text-gray-500 ">
             {" "}
-            {t("footer.call_center")} : +998 95 127 00 90{" "}
+            {t("footer.call_center")} +998(99)829-3303{" "}
           </p>
         </div>
 
         {/* Middle Section */}
         <div className="space-y-4 ">
           <h3 className="font-semibold text-lg mb-6">{t("footer.company")}</h3>
-          <ul className="flex gap-6 text-gray-500   ">
+          <ul className="flex gap-6 text-gray-500">
             <li>
               <a href="#" className="hover:text-yellow-500">{t("footer.company_names.0")}</a>
             </li>
@@ -59,9 +59,13 @@ Network Logo"
         <div className="">
           <h3 className="font-semibold text-lg mb-2"> {t("footer.documents")} </h3>
           <div className="flex gap-6 mt-6 text-lg">
-            <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
+           <a href="">
+           <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
+           </a>
           
-            <FaYoutube className="text-gray-500 hover:text-red-500 cursor-pointer" />
+           <a href="www.youtube.com/@FutureFiNetwork">
+           <FaYoutube className="text-gray-500 hover:text-red-500 cursor-pointer" />
+           </a>
            
           </div>
         </div>

@@ -8,10 +8,10 @@
   },
   "hero": {
     "title": "Yarating",
-    "subtitle":{
-      "fn":"Moliyaviy Bilimlar ",
-      "ff":"Moliyaviy Kelajak",
-      "fc":"Moliyaviy Ishonch"
+    "subtitle": {
+      "fn": "Moliyaviy Bilimlar ",
+      "ff": "Moliyaviy Kelajak",
+      "fc": "Moliyaviy Ishonch"
     },
     "info": "FutureFi Network tarmog‘iga xush kelibsiz! Biz bepul onlayn resurslar va interaktiv darslar orqali o‘quvchilarga muhim moliyaviy ko‘nikmalarni o‘rgatish uchun shu yerdamiz. Bilimlarni oshiring, imkoniyatlarni o‘rganing va yorqin kelajakni shakllantiring!",
     "cta": "  Kurslarni ko‘rib chiqish",
@@ -58,7 +58,7 @@
   },
   "contact": {
     "title": "Biz bilan bog'laning",
-    "phone":    "Telefon",
+    "phone": "Telefon",
     "email_address": "Elektron pochta",
     "subtitle": "Habar yuboring",
     "name": "Ism",
@@ -68,47 +68,108 @@
   },
   "footer": {
     "call_center": "Qo'ng'iroq markazi",
-    "company":"Kompaniya",
+    "company": "Kompaniya",
     "company_names": ["Kurslar", "Tadbirlar", "Biz haqimizda", "Asosiy"],
 
     "documents": "Ijtimoiy Tarmoqlar",
     "address": "Manzil",
     "location": "Toshkent shahri, Yunusobod tumani, 5-uy"
   },
-  "class":{
+  "class": {
     "title": "FutureFi Network Onlayn Darslariga Xush Kelibsiz",
     "button": "Yozilish",
-    "overview":"Umumiy Ma'lumot",
-    "overview_title":"Bizning darslarimiz",
-    "overview_description":"Bizning Zoom platformasida o'tkaziladigan onlayn darslarimiz turli darajalar uchun moslashtirilgan tuzilmali va interaktiv o'quv jarayonini taklif etadi. Videolarimizdan farqli, har bir dars seriyasi ishtirokchilarni qo'llab-quvvatlab, ularning moliyaviy bilimlarini rivojlantirishda yangi tajribalar beradi. Seriyani tugatgach, ishtirokchilar boshqa darslarga yoki video materiallarga o'tib, ko'nikmalarini yanada rivojlantirishlari mumkin.",
-    "overview_how":"Darslar Qanday O'tkaziladi?",
-    "overview_ans":["Sizni qiziqtirgan darslar seriyasini tanlang.","Belgilangan vaqtda 10–15 ta interaktiv sessiyaga qo'shiling.","Guruh bilan birgalikda o'rganing va jonli muhokamalarda savollar bering.","Seriyaning oxirida testdan o'ting.","Keyingi seriyaga yoki videokurslarga yoziling!"]
-  },
-  "classTeach":{
-    "sub":"Bizning kurslarimiz",
-    "title":"Nimani O'rgatamiz",
-    "data":[
-      {"title":"Shaxsiy Moliya Ilg'or",
-    "description":"Moliyaviy bilimlaringizni yangi darajaga ko'tarib, murakkab mavzularni o'rganing. Ushbu seriyadan so'ng siz moliyangizni boshqarishni va boylikni oshirishni o'rganasiz!"},
-      {"title":"Korporativ Moliya Boshlang'ich",
-    "description":"Korporativ moliyaning asosiy tushunchalarini, pulning vaqt qiymati, kapital byudjetlash va muhim moliyaviy tushunchalarni o'rganing."},
-   {"title":"Korporativ moliya Ilg'or",
-    "description":"Korporativ moliyaning murakkab mavzularini, jumladan kapital tuzilmasi, qiymatni aniqlash va xavfni boshqarish usullarini o'rganib, strategik moliyaviy qarorlar qabul qilishda yetakchi bo'ling."},
-   {"title":"Buxgalteriya Boshlang'ich",
-    "description":"Moliyaviy hisobotlar, tranzaksiyalarni qayd etish va asosiy moliyaviy tahlil kabi asosiy tushunchalarni o'rganib, buxgalteriya sohasida mustahkam poydevor yarating."},
-    {"title":"Buxgalteriya Ilg'or",
-    "description":"Moliyaviy hisobotlar, audit va murakkab moliyaviy tahlil kabi mavzularni chuqur o'rganib, qarorlar qabul qilish ko'nikmalaringizni yaxshilang."},
-    {"title":"Kasbiy Tadqiq",
-    "description":"Biz yoshligidan kasbga tayyorlanish muhim deb hisoblaymiz, chunki qayerga yo'nalishingizni bilish juda zarur. Shu sababli, biz ushbu seriyani yaratdik — moliya sohasidagi barcha turli yo'nalishlarni o'rganish va har biri haqida batafsil ma'lumot berish uchun."}
+    "overview": "Umumiy Ma'lumot",
+    "overview_title": "Bizning darslarimiz",
+    "overview_description": "Bizning Zoom platformasida o'tkaziladigan onlayn darslarimiz turli darajalar uchun moslashtirilgan tuzilmali va interaktiv o'quv jarayonini taklif etadi. Videolarimizdan farqli, har bir dars seriyasi ishtirokchilarni qo'llab-quvvatlab, ularning moliyaviy bilimlarini rivojlantirishda yangi tajribalar beradi. Seriyani tugatgach, ishtirokchilar boshqa darslarga yoki video materiallarga o'tib, ko'nikmalarini yanada rivojlantirishlari mumkin.",
+    "overview_how": "Darslar Qanday O'tkaziladi?",
+    "overview_ans": [
+      "Sizni qiziqtirgan darslar seriyasini tanlang.",
+      "Belgilangan vaqtda 10–15 ta interaktiv sessiyaga qo'shiling.",
+      "Guruh bilan birgalikda o'rganing va jonli muhokamalarda savollar bering.",
+      "Seriyaning oxirida testdan o'ting.",
+      "Keyingi seriyaga yoki videokurslarga yoziling!"
     ]
   },
- "course": {
-  "title": "Kurs Modullari",
-  "left": "Qaytganingizdan xursandmiz!",
-  "center": "Kurs Modullari"
+  "classTeach": {
+    "sub": "Bizning kurslarimiz",
+    "title": "Nimani O'rgatamiz",
+    "data": [
+      {
+        "title": "Shaxsiy Moliya Ilg'or",
+        "description": "Moliyaviy bilimlaringizni yangi darajaga ko'tarib, murakkab mavzularni o'rganing. Ushbu seriyadan so'ng siz moliyangizni boshqarishni va boylikni oshirishni o'rganasiz!"
+      },
+      {
+        "title": "Korporativ Moliya Boshlang'ich",
+        "description": "Korporativ moliyaning asosiy tushunchalarini, pulning vaqt qiymati, kapital byudjetlash va muhim moliyaviy tushunchalarni o'rganing."
+      },
+      {
+        "title": "Korporativ moliya Ilg'or",
+        "description": "Korporativ moliyaning murakkab mavzularini, jumladan kapital tuzilmasi, qiymatni aniqlash va xavfni boshqarish usullarini o'rganib, strategik moliyaviy qarorlar qabul qilishda yetakchi bo'ling."
+      },
+      {
+        "title": "Buxgalteriya Boshlang'ich",
+        "description": "Moliyaviy hisobotlar, tranzaksiyalarni qayd etish va asosiy moliyaviy tahlil kabi asosiy tushunchalarni o'rganib, buxgalteriya sohasida mustahkam poydevor yarating."
+      },
+      {
+        "title": "Buxgalteriya Ilg'or",
+        "description": "Moliyaviy hisobotlar, audit va murakkab moliyaviy tahlil kabi mavzularni chuqur o'rganib, qarorlar qabul qilish ko'nikmalaringizni yaxshilang."
+      },
+      {
+        "title": "Kasbiy Tadqiq",
+        "description": "Biz yoshligidan kasbga tayyorlanish muhim deb hisoblaymiz, chunki qayerga yo'nalishingizni bilish juda zarur. Shu sababli, biz ushbu seriyani yaratdik — moliya sohasidagi barcha turli yo'nalishlarni o'rganish va har biri haqida batafsil ma'lumot berish uchun."
+      }
+    ]
+  },
+  "course": {
+    "title": "Kurs Modullari",
+    "left": "Qaytganingizdan xursandmiz!",
+    "center": "Kurs Modullari"
+  },
+
+  "classContact": {
+    "formTitle": "Istalgan darslar seriyasiga ro‘yxatdan o‘ting",
+    "fields": {
+      "name": {
+        "label": "To‘liq ism",
+        "placeholder": "Ismingizni kiriting"
+      },
+      "email": {
+        "label": "Elektron pochta",
+        "placeholder": "Elektron pochtangizni kiriting"
+      },
+      "age": {
+        "label": "Yosh",
+        "placeholder": "Yoshingizni kiriting"
+      },
+      "schoolClass": {
+        "label": "Sinfingizni kiriting",
+        "placeholder": "Masalan: 10-sinf, Senior year"
+      },
+      "courseSelection": {
+        "label": "Darslar seriyasini tanlang",
+        "placeholder": "Kursni tanlang"
+      },
+      "courseOptions": [
+        "Ilg‘or Shaxsiy Moliya",
+        "Korporativ Moliya Boshlang‘ich",
+        "Korporativ Moliya Ilg‘or",
+        "Buxgalteriya Boshlang‘ich",
+        "Buxgalteriya Ilg‘or",
+        "Kasb Tadqiq"
+      ],
+      "experience": {
+        "label": "Moliyaga oid tajribangiz haqida qisqacha yozing (agar bo‘lsa):",
+        "placeholder": "Tajriba haqida yozing"
+      },
+      "expectations": {
+        "label": "Ushbu darslar seriyasidan nimani o‘rganishni xohlaysiz?",
+        "placeholder": "Kutilgan natijalarni yozing"
+      },
+      "additionalInfo": {
+        "label": "Biz bilishimiz kerak bo‘lgan boshqa ma’lumot bormi?",
+        "placeholder": "Qo‘shimcha ma’lumot kiriting"
+      }
+    },
+    "submitButton": "Yuborish"
+  }
 }
-
-
-
-}
-

@@ -1,14 +1,9 @@
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import {
-  FaChevronUp,
-  FaChevronDown,
-  FaVideo,
-  FaQuestion,
-  
-} from "react-icons/fa";
+import {FaChevronUp, FaChevronDown, FaVideo, FaQuestion} from "react-icons/fa";
 import {getSwaggerData} from "../components/apiServer";
-import { t } from "i18next";
+import {t} from "i18next";
+import bgvideo from "../assets/bgvideo.mp4"
 
 const CourseIntro = () => {
   const [modules, setModules] = useState([]);
@@ -30,15 +25,29 @@ const CourseIntro = () => {
 
   return (
     <>
-      <section className="mt-[88px]"
-        style={{
-          background:
-            'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://picsum.photos/1200/300")',
-          backgroundSize: "cover",
-        }}>
-        <div className="container max-w-[1320px] mx-auto px-5 ">
-          <h1 className="text-5xl  font-semibold mt-20 pt-32 pb-48  text-white ">
-           {t("course.title")}
+      <section className="relative mt-[88px] h-[400px] overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover">
+          <source
+            src={bgvideo} // Replace with your video URL
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 bg-black bg-opacity-60"
+          aria-hidden="true"></div>
+
+        {/* Content */}
+        <div className="relative container max-w-[1320px] mx-auto px-5">
+          <h1 className="text-5xl font-semibold mt-20 pt-32 pb-48 text-white">
+            {t("course.title")}
           </h1>
         </div>
       </section>
@@ -46,8 +55,11 @@ const CourseIntro = () => {
       <section className="py-10 bg-slate-100">
         <div className="w-full max-w-[1320px] mx-auto px-5">
           <h2 className="text-4xl py-6 font-bold"> {t("course.left")}</h2>
-          <h3 className="text-4xl py-6 font-bold text-center"> {t("course.center")}</h3>
-      
+          <h3 className="text-4xl py-6 font-bold text-center">
+            {" "}
+            {t("course.center")}
+          </h3>
+
           <div className=" bg-gray-100">
             {modules.map((module) => (
               <div
@@ -89,7 +101,6 @@ const CourseIntro = () => {
                             <FaQuestion className="text-green-500" />
                             <strong>Questions:</strong> {module.questions_count}
                           </p>
-                        
                         </div>
                         <div className="info_group flex flex-wrap gap-4 items-center justify-between">
                           <Link
