@@ -36,7 +36,7 @@
   },
   "ceo_message": {
     "subtitle": "Onlayn, o‘zingizning tezligingizda",
-    "title": "FutureFi Network bosh direktori",
+    "title": "FutureFi Network asoschisi",
     "info": "Salom, mening ismim Abdulaziz, lekin hamma meni Aziz deb chaqiradi. Bolaligimdan moliyaga qiziqaman, lekin uni o‘rganish ko‘pincha murakkab tuyulardi. Bu menga FutureFi Network platformasini yaratishga ilhom berdi — bu platforma moliyaviy ta’limni har kim uchun oson va tushunarli qiladi. Mening maqsadim — o‘quvchilarga muhim moliyaviy ko‘nikmalarni o‘rgatish va moliyaviy savodxon avlodni tarbiyalash. Men Toshkentdagi Leader School’da, Bostondagi CATS Academy’da tahsil oldim, hozir esa AQShdagi Pomfret School’da o‘qiyman. Shuningdek, men shaxmat va basketbolga qiziqaman va Toshkent, O‘zbekistonni o‘z uyim deb bilaman."
   },
   "what_we_offer": {
@@ -123,7 +123,17 @@
   "course": {
     "title": "Kurs Modullari",
     "left": "Qaytganingizdan xursandmiz!",
-    "center": "Kurs Modullari"
+    "center": "Kurs Modullari",
+    "courseIntro":{
+      "videos":"Videolari", 
+      "tests":"Savollar",
+      "start":"Darsni Boshlash"
+    },
+    "btn":{
+      "prev":"Oldingi dars",
+      "next":"Keyingi dars",
+      "startQuiz":"Testni boshlash"
+    }
   },
 
   "classContact": {
@@ -171,5 +181,31 @@
       }
     },
     "submitButton": "Yuborish"
-  }
+  },
+    "quiz": {
+      "title": "Bilimingizni sinang",
+      "start": "Yuborish",
+      "next": "Keyingi savol",
+      "result": "Natijalarni ko'rish",
+      "answerCorrect": "To'g'ri!",
+      "answerIncorrect": "Noto'g'ri!",
+      "unselect": "Iltimos, javob tanlang",
+  
+      "quizResults": {
+        "title": "Test natijalari",
+        "passedMessage": "Tabriklaymiz! Siz muvaffaqiyatli topshirdingiz.",
+        "failedMessage": "Afsuski, siz muvaffaqiyatli topshira olmadingiz.",
+        "details": {
+          "totalQuestions": "Umumiy savollar soni",
+          "correctAnswers": "To'g'ri javoblar",
+          "passingScore": "O'tish uchun zarur ball"
+        },
+        "buttons": {
+          "retakeQuiz": "Testni qayta topshirish",
+          "restartModule": "Modulni qayta boshlash"
+        }
+      }
+    }
+
+  
 }

@@ -1,5 +1,6 @@
 import './Banner.css'
 
+
 const Banner = ({ images, speed = 5000 }) => {
     return (
       <div className="inner">

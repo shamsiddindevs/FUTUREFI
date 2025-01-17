@@ -1,15 +1,15 @@
-// App.js
-import  { useState } from "react";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { t } from "i18next";
+import {useState} from "react";
+import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const QuizResults = ({ score, totalQuestions, onRetake }) => {
-  const passingScore = 80; // Define passing score percentage
+const QuizResultss = ({score, totalQuestions, onRetake,setShowQuiz}) => {
+  const passingScore = 80;
   const isPassed = score >= passingScore;
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="text-2xl font-bold mb-6">Test Results</div>
+      <div className="text-2xl font-bold mb-6">{t("quiz.quizResults.title")}</div>
       <div className="w-48 h-48 mb-4">
         <CircularProgressbar
           value={score}
@@ -23,48 +23,39 @@ const QuizResults = ({ score, totalQuestions, onRetake }) => {
       </div>
       <div className="text-lg font-semibold mb-4">
         {isPassed ? (
-          <span className="text-green-500">Congratulations! You Passed.</span>
+          <span className="text-green-500">✅</span>
         ) : (
-          <span className="text-red-500">Unfortunately, You Failed.</span>
+          <span className="text-red-500">❌</span>
         )}
       </div>
       <div className="text-gray-700">
-        <p>Total Questions: {totalQuestions}</p>
-        <p>Correct Answers: {Math.round((score / 100) * totalQuestions)}</p>
-        <p>Passing Score: {passingScore}%</p>
+        <p>{t("quiz.quizResults.details.totalQuestions")}: {totalQuestions}</p>
+        <p>{t("quiz.quizResults.details.correctAnswers")}: {Math.round((score / 100) * totalQuestions)}</p>
+        <p>{t("quiz.quizResults.details.passingScore")}: {passingScore}%</p>
       </div>
       <button
         className="btn btn-primary mt-6"
-        onClick={onRetake}
-      >
-        Retake Quiz
+        onClick={onRetake}>
+       {t("quiz.quizResults.buttons.retakeQuiz")}
+      </button>
+      <button
+        className="btn btn-secondary mt-6"
+        onClick={()=>setShowQuiz(false)}>
+        {t("quiz.quizResults.buttons.restartModule")}
       </button>
     </div>
   );
 };
 
-const Quiz = () => {
-  const questions = [
-    {
-      question: "Each financial decision you make involves trade-offs between ______ you and ______ you.",
-      options: ["Past and future", "Present and past", "Present and future"],
-      correct: "Present and future",
-      explanation:
-        "Each financial decision involves trade-offs between your present and future selves. Spending today can affect your future savings.",
-    },
-    {
-      question:
-        "Dorothy starts investing at age 15, putting aside $100 per month until she is 25. Alex starts investing at age 30. Who is better prepared for retirement?",
-      options: ["Dorothy", "Alex", "They would be equally prepared"],
-      correct: "Dorothy",
-      explanation:
-        "Dorothy is better prepared because she benefits from compounding. Starting earlier allows her investments to grow more over time.",
-    },
-  ];
+const Quiz = (props) => {
+  console.log(props);
+  const {quiz: questions, setShowQuiz} = props;
+
+
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [isTestFinished, setIsTestFinished] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -73,26 +64,19 @@ const Quiz = () => {
   };
 
   const handleSubmit = () => {
-    if (!selectedOption) {
-      setResult("Please select an answer.");
-      return;
-    }
+   
 
-    const isCorrect = selectedOption === questions[currentQuestion].correct;
+    const isCorrect = selectedOption.is_correct;
 
     if (isCorrect) {
-      setScore(score + 100 / questions.length); // Update score dynamically
+      setScore(score + 100 / questions?.length); // Update score dynamically
     }
 
-    setResult(
-      isCorrect
-        ? `Correct! ${questions[currentQuestion].explanation}`
-        : `Incorrect. ${questions[currentQuestion].explanation}`
-    );
+    setResult(true);
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
+    if (currentQuestion < questions?.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
       setResult(null);
@@ -115,52 +99,53 @@ const Quiz = () => {
         <div className="flex justify-center items-center h-full bg-gray-100">
           <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-4">
-              Question {currentQuestion + 1}/{questions.length}
+              {t("quiz.title")} {currentQuestion + 1}/{questions?.length}
             </h2>
-            <p className="mb-4">{questions[currentQuestion].question}</p>
+            <p className="mb-4">{questions[currentQuestion]?.name}</p>
             <div className="flex flex-col gap-2">
-              {questions[currentQuestion].options.map((option) => (
-                <label key={option} className="cursor-pointer flex items-center">
+              {questions[currentQuestion]?.options?.map((option) => (
+                <label
+                  key={option.id}
+                  className="cursor-pointer flex items-center">
                   <input
                     type="radio"
                     name="option"
-                    value={option}
+                    value={option.id}
                     className="radio radio-primary mr-2"
-                    checked={selectedOption === option}
+                    checked={selectedOption?.id === option?.id}
                     onChange={() => handleOptionChange(option)}
                   />
-                  {option}
+                  {option.name}
                 </label>
               ))}
             </div>
             <button
               className="btn btn-primary mt-4 w-full"
-              onClick={handleSubmit}
-            >
-              Submit
+              onClick={handleSubmit}>
+              {t("quiz.start")}
             </button>
-            {result && (
-              <div className="mt-4 p-2 rounded-md text-white bg-gray-800">
-                {result}
+            {!selectedOption && (
+              <div className="mt-4 p-2 rounded-md text-gray-800 bg-green-200">
+                {t("quiz.unselect")}
               </div>
             )}
             {result && (
               <button
                 className="btn btn-secondary mt-4 w-full"
-                onClick={handleNext}
-              >
+                onClick={handleNext}>
                 {currentQuestion < questions.length - 1
-                  ? "Next Question"
-                  : "See Results"}
+                  ? t("quiz.next")
+                  : t("quiz.result")}
               </button>
             )}
           </div>
         </div>
       ) : (
-        <QuizResults
+        <QuizResultss
           score={Math.round(score)}
           totalQuestions={questions.length}
           onRetake={handleRetake}
+          setShowQuiz={setShowQuiz}
         />
       )}
     </div>

@@ -95,18 +95,18 @@ const CourseIntro = () => {
                         <div className="flex flex-col gap-2">
                           <p className="flex items-center gap-2">
                             <FaVideo className="text-blue-500" />
-                            <strong>Videos:</strong> {module.videos_count}
+                            <strong>{t("course.courseIntro.videos")}:</strong> {module.videos_count}
                           </p>
                           <p className="flex items-center gap-2">
                             <FaQuestion className="text-green-500" />
-                            <strong>Questions:</strong> {module.questions_count}
+                            <strong>{t("course.courseIntro.tests")}:</strong> {module.questions_count}
                           </p>
                         </div>
                         <div className="info_group flex flex-wrap gap-4 items-center justify-between">
                           <Link
                             to={`/courses/${module.id}`}
                             className="btn btn-md btn-primary">
-                            Start Lesson
+                            {t("course.courseIntro.start")}
                           </Link>
                         </div>
                       </div>

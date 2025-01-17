@@ -124,7 +124,19 @@
   "course": {
     "title": "Модули Курса",
     "left": "С возвращением!",
-    "center": "Модули Курса"
+    "center": "Модули Курса",
+
+    "courseIntro": {
+      "videos": "Видео",
+      "tests": "Вопросы",
+      "start": "Начать урок"
+    },
+
+    "btn": {
+      "prev": "Предыдущий урок",
+      "next": "Следующий урок",
+      "startQuiz": "Начать тест"
+    }
   },
 
   "classContact": {
@@ -172,5 +184,29 @@
       }
     },
     "submitButton": "Отправить"
+  },
+  "quiz": {
+    "title": "Проверьте свои знания",
+    "start": "Отправить",
+    "next": "Следующий вопрос",
+    "result": "Посмотреть результаты",
+    "answerCorrect": "Правильно!",
+    "answerIncorrect": "Неправильно!",
+    "unselect": "Пожалуйста, выберите ответ",
+
+    "quizResults": {
+      "title": "Результаты теста",
+      "passedMessage": "Поздравляем! Вы успешно прошли тест.",
+      "failedMessage": "К сожалению, вы не прошли тест.",
+      "details": {
+        "totalQuestions": "Всего вопросов",
+        "correctAnswers": "Правильные ответы",
+        "passingScore": "Проходной балл"
+      },
+      "buttons": {
+        "retakeQuiz": "Пересдать тест",
+        "restartModule": "Перезапустить модуль"
+      }
+    }
   }
 }

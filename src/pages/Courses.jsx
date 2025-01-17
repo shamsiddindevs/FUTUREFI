@@ -4,10 +4,18 @@ import {getSwaggerData} from "../components/apiServer";
 import {useParams} from "react-router-dom";
 import cubs from "../assets/cubs.jpg";
 import Quiz from "./Quest";
+import { t } from "i18next";
 
 const Courses = () => {
+
   const [module, setModule] = useState(null);
-  const [showQuiz, setShowQuiz] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(localStorage.getItem("showQuiz")&&false);
+ 
+  function handleShowQuiz(type){
+    setShowQuiz(type);
+    localStorage.setItem("showQuiz", type);
+  }
+
   const {id} = useParams();
 
   useEffect(() => {
@@ -109,9 +117,9 @@ const Courses = () => {
                   </div>
                 ))}
                 <button
-                  onClick={() => setShowQuiz(true)}
+                  onClick={() => handleShowQuiz(true)}
                   className="p-2">
-                  Start Quiz Test
+                 {t("course.btn.startQuiz")}
                 </button>
               </div>
             </li>
@@ -119,7 +127,7 @@ const Courses = () => {
         </ul>
         <div className="flex-1 h-[85vh] w-full max-w-[1320px] mx-auto shadow-md rounded-lg overflow-auto">
           {showQuiz ? (
-            <Quiz id={id} />
+            <Quiz id={id} setShowQuiz={handleShowQuiz} quiz = {module.questions} />
           ) : (
             module &&
             module.videos.map(
@@ -147,7 +155,7 @@ const Courses = () => {
                           module.videos.findIndex((v) => v.id === video.id) ===
                           0
                         }>
-                        Oldingi dars {""}
+                         {t("course.btn.prev")}
                       </button>
                       <h3 className="font-semibold text-sm md:text-md capitalize">
                         {video.id}. {video.name}
@@ -157,13 +165,13 @@ const Courses = () => {
                         <button
                           onClick={() => setShowQuiz(true)}
                           className="btn btn-primary btn-md">
-                          Start Quiz Test
+                          {t("course.btn.startQuiz")}
                         </button>
                       ) : (
                         <button
                           className="btn btn-primary btn-md"
                           onClick={() => playNextVideo(video.id)}>
-                          Keyingi dars
+                         {t("course.btn.next")}
                         </button>
                       )}
                     </div>

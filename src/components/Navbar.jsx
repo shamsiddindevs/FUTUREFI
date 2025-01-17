@@ -146,8 +146,8 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-              <p className="hidden md:block     font-semibold ">
-                <span className="text-yellow-500">95</span> 127 00 90
+              <p className="hidden md:block font-semibold ">
+                <span className="text-yellow-500">99 </span>829 33 03
               </p>
 
               <button
@@ -231,7 +231,7 @@ const Navbar = () => {
               {t("nav.contact")}
             </HashLink>
             <p className="font-semibold md:hidden nav_link gap-1 ">
-              <span className="text-yellow-500">95</span>127 00 90
+              <span className="text-yellow-500">99</span>829 33 03
             </p>
           </div>
         </div>

@@ -123,7 +123,17 @@
   "course": {
     "title": "Course Modules",
     "left": "Welcome back!",
-    "center": "Course Modules"
+    "center": "Course Modules",
+    "courseIntro":{
+      "videos":"Videos", 
+      "tests":"Questions",
+      "start":"Start Lesson"
+    },
+    "btn": {
+    "prev": "Previous Lesson",
+    "next": "Next Lesson",
+    "startQuiz": "Start Quiz Test"
+  }
   },
 
   "classContact": {
@@ -171,5 +181,33 @@
       }
     },
     "submitButton": "Submit"
+  },
+
+  "quiz":{
+     "title": "Test Your Knowledge",
+     "start":"Submit",
+     "next": "Next Question",
+     "result":"See Result",
+     "answerCorrect":"Correct!",
+     "answerIncorrect":"Incorrect!",
+     "unselect":"Please Select an Answer",
+
+     "quizResults":{
+      "title":"Test Results",
+      "passedMessage":"Congratulations! You Passed.",
+      "failedMessage":"Unfortunately, You Failed.",
+      "details":{
+        "totalQuestions":"Total Questions",
+        "correctAnswers":"Correct Answers",
+        "passingScore":"Passing Score"
+      },
+      "buttons":{
+        "retakeQuiz": "Retake Quiz",
+        "restartModule":"Restart Module"
+      }
+     }
+
+
+
   }
 }

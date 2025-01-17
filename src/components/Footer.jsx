@@ -59,7 +59,7 @@ Network Logo"
         <div className="">
           <h3 className="font-semibold text-lg mb-2"> {t("footer.documents")} </h3>
           <div className="flex gap-6 mt-6 text-lg">
-           <a href="">
+           <a href="https://t.me/+9cpRoGYBvqswZDky">
            <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
            </a>
           
