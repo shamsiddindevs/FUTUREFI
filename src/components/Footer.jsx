@@ -64,7 +64,7 @@ Network Logo"
            <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
            </a>
           
-           <a href="www.youtube.com/@FutureFiNetwork">
+           <a href="https://www.youtube.com/@FutureFiNetwork" target="_blank">
            <FaYoutube className="text-gray-500 hover:text-red-500 cursor-pointer" />
            </a>
            
