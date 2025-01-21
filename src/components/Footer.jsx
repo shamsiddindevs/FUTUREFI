@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
 import logo from "../assets/logo.png";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   const {t} = useTranslation();
@@ -41,16 +42,16 @@ Network Logo"
           <h3 className="font-semibold text-lg mb-6">{t("footer.company")}</h3>
           <ul className="flex gap-6 text-gray-500">
             <li>
-              <a href="#" className="hover:text-yellow-500">{t("footer.company_names.0")}</a>
+              <HashLink to="/courseIntro#" className="hover:text-yellow-500">{t("footer.company_names.0")}</HashLink>
             </li>
             <li>
-              <a className="hover:text-yellow-500" href="#">{t("footer.company_names.1")}</a>
+              <HashLink className="hover:text-yellow-500" to="/classes#">{t("footer.company_names.1")}</HashLink>
             </li>
             <li>
-              <a className="hover:text-yellow-500" href="#">{t("footer.company_names.2")}</a>
+              <HashLink className="hover:text-yellow-500" to="/#about">{t("footer.company_names.2")}</HashLink>
             </li>
             <li>
-              <a className="hover:text-yellow-500" href="#">{t("footer.company_names.3")}</a>
+              <HashLink className="hover:text-yellow-500" to="/#">{t("footer.company_names.3")}</HashLink>
             </li>
           </ul>
         </div>

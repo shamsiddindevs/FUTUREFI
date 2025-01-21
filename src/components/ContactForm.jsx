@@ -77,17 +77,17 @@ const ContactForm = () => {
         </h2>
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-10">
-            <div className="flex flex-col items-center p-6 bg-white hover:shadow-xl transition-all duration-300 rounded-lg w-[210px] shadow-lg">
+            <div className="flex flex-col items-center p-6 bg-white hover:shadow-xl transition-all duration-300 rounded-lg w-[250px] shadow-lg">
               <FaPhoneAlt className="text-yellow-500 text-5xl mb-4" />
               <h2 className="text-xl font-semibold">{t("contact.phone")}</h2>
-              <p className="text-gray-600">+998 (99) 829-3303</p>
+              <a href={`tel:+998998293303`} className="text-gray-600">+998 (99) 829-3303</a>
             </div>
-            <div className="flex flex-col items-center p-6 bg-white hover:shadow-xl transition-all shadow-lg rounded-lg w-[210px]">
+            <div className="flex flex-col items-center p-6 bg-white hover:shadow-xl transition-all shadow-lg rounded-lg w-[250px]">
               <MdEmail className="text-yellow-500 text-5xl mb-4" />
               <h2 className="text-xl font-semibold">
                 {t("contact.email_address")}
               </h2>
-              <p className="text-gray-600">info@futurefinetwork.org</p>
+              <a href={`mailto:devshamsiddin@gmail.com`}  className="text-gray-600">info@futurefinetwork.org</a>
             </div>
           </div>
           <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">

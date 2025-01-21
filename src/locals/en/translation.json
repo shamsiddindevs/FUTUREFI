@@ -48,7 +48,10 @@
       },
       {
         "title": " Online Courses",
-        "message": "Our courses are available for free and include tests at the end to help reinforce learning. Please find our current offerings here(link to Online Courses page). While the courses are designed with high school students in mind, anyone eager to learn is welcome!"
+        "message0": "Our courses are available for free and include tests at the end to help reinforce learning. While the courses are designed with high school students in mind, anyone eager to learn is welcome!",
+        "link":" Please find our current offerings here.",
+        "message1":"While the courses are designed with high school students in mind, anyone eager to learn is welcome!"
+
       },
       {
         "title": "  Career Exploration",
@@ -69,7 +72,7 @@
   "footer": {
     "call_center": "Call Center",
     "company": "Company",
-    "company_names": ["Courses", "Events", "About Us", "Main"],
+    "company_names": ["Courses", "Classes", "About Us", "Home"],
 
     "documents": "Social Links",
     "address": "Address",
@@ -121,9 +124,9 @@
     ]
   },
   "course": {
-    "title": "Course Modules",
-    "left": "Welcome back!",
-    "center": "Course Modules",
+    "title":  "FutureFi Network Finance Courses",
+    "left": "Welcome! Our online courses offer flexible, self-paced learning with engaging video lessons and end-of-course tests. Designed for learners starting at a young age but open to everyone, this unique combination of videos and classes allows learners to progress from foundational knowledge to advanced skills in finance, inspiring and empowering future financial leaders.",
+    "center": "Courses",
     "courseIntro":{
       "videos":"Videos", 
       "tests":"Questions",

@@ -1,9 +1,11 @@
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import {FaChevronUp, FaChevronDown, FaVideo, FaQuestion} from "react-icons/fa";
+import {FaChevronUp, FaChevronDown} from "react-icons/fa";
 import {getSwaggerData} from "../components/apiServer";
 import {t} from "i18next";
 import bgvideo from "../assets/bgvideo.mp4"
+import video from "../assets/video-time-icon.svg"
+import ques from "../assets/quiz-icon.svg"
 
 const CourseIntro = () => {
   const [modules, setModules] = useState([]);
@@ -25,7 +27,7 @@ const CourseIntro = () => {
 
   return (
     <>
-      <section className="relative mt-[88px] h-[400px] overflow-hidden">
+      <section className="relative mt-[88px]  overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -46,7 +48,7 @@ const CourseIntro = () => {
 
         {/* Content */}
         <div className="relative container max-w-[1320px] mx-auto px-5">
-          <h1 className="text-5xl font-semibold mt-20 pt-32 pb-48 text-white">
+          <h1 className="text-5xl font-semibold mt-20  pt-32 pb-48 text-white">
             {t("course.title")}
           </h1>
         </div>
@@ -54,8 +56,8 @@ const CourseIntro = () => {
 
       <section className="py-10 bg-slate-100">
         <div className="w-full max-w-[1320px] mx-auto px-5">
-          <h2 className="text-4xl py-6 font-bold"> {t("course.left")}</h2>
-          <h3 className="text-4xl py-6 font-bold text-center">
+          <h2 className="text-xl py-6 font-normal text-gray-500"> {t("course.left")}</h2>
+          <h3 className="text-4xl py-10 font-bold text-center text-gray-700">
             {" "}
             {t("course.center")}
           </h3>
@@ -94,11 +96,11 @@ const CourseIntro = () => {
                       <div className="flex items-end justify-between gap-10">
                         <div className="flex flex-col gap-2">
                           <p className="flex items-center gap-2">
-                            <FaVideo className="text-blue-500" />
+                            <img className="-ml-1" src={video} alt=" video icon" />
                             <strong>{t("course.courseIntro.videos")}:</strong> {module.videos_count}
                           </p>
                           <p className="flex items-center gap-2">
-                            <FaQuestion className="text-green-500" />
+                            <img className="ml-0" src={ques} alt="quiz icon" />
                             <strong>{t("course.courseIntro.tests")}:</strong> {module.questions_count}
                           </p>
                         </div>

@@ -51,8 +51,8 @@ const Hero = () => {
       id="hero"
       className=" flex  items-center justify-center min-h-screen ">
       <div className="container w-full mx-auto max-w-[1320px] px-5 isolate  md:mt-24 lg:mt-[148px]">
-        <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-20 pt-20 md:pt-0 ">
-          <div className=" flex-1 flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-10 justify-between lg:gap-10 pt-20 md:pt-0 ">
+          <div className="  md:w-[55%] flex flex-col gap-4">
             <h1 className="text-[40px]  font-semibold lg:font-bold leading-[50px] lg:text-[60px] lg:leading-[65px] my-5 ">
               {t("hero.title")} <br />{" "}
               <span
@@ -67,7 +67,7 @@ const Hero = () => {
                 {t("hero.cta")}
               </Link>
               <HashLink
-                to="#contact"
+                to="/classes#contact"
                 className="border border-yellow-500 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-yellow-500  hover:btn_text">
                 {t("hero.cta2")}
               </HashLink>
@@ -110,7 +110,7 @@ const Hero = () => {
             loading="lazy" 
               src={hero}
               alt="hero image"
-              className="rounded-3xl skeleton object-cover "
+              className="rounded-3xl skeleton object-cover w-full"
             />
             {/* <svg
               className="w-12 h-12 text-yellow-100 dark:text-gray-600"

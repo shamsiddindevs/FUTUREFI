@@ -3,6 +3,7 @@ import onlineCourse from "../assets/online-course.png";
 import career from "../assets/career.png";
 
 import {useTranslation} from "react-i18next";
+import { HashLink } from "react-router-hash-link";
 
 const StudentProfiles = () => {
   const {t} = useTranslation();
@@ -41,7 +42,9 @@ const StudentProfiles = () => {
             {t("what_we_offer.cards.1.title")}
           </h3>
           <p className="mt-4 text-gray-700 text-center">
-            {t("what_we_offer.cards.1.message")}
+            {t("what_we_offer.cards.1.message0")} 
+            <HashLink className="text-primary" to="/classes#">{t("what_we_offer.cards.1.link")}</HashLink>
+            {t("what_we_offer.cards.1.message1")} 
           </p>
         </div>
 
