@@ -10,19 +10,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { HashLink } from "react-router-hash-link";
 
 const Courses = () => {
   const videoRefs = useRef([]); // Array to hold references to all videos
   const [swiper, setSwiper] = useState(null);
   const [module, setModule] = useState(null);
-  const [showQuiz, setShowQuiz] = useState(
-    localStorage.getItem("showQuiz") && false
-  );
-
-  function handleShowQuiz(type) {
-    setShowQuiz(type);
-    localStorage.setItem("showQuiz", type);
-  }
+  const [showQuiz, setShowQuiz] = useState(false); // Manage quiz visibility
+  const [allVideosFinished, setAllVideosFinished] = useState(false); // Tracks if all videos are finished
 
   const { id } = useParams();
 
@@ -44,45 +39,57 @@ const Courses = () => {
     }
   }, [module]);
 
+  const handleVideoEnded = (index) => {
+    if (index === module.videos.length - 1) {
+      // If the last video finishes, set allVideosFinished to true
+      setAllVideosFinished(true);
+    }
+  };
+
   const playNextVideo = (currentVideoId) => {
     const currentVideoIndex = module.videos.findIndex(
       (video) => video.id === currentVideoId
     );
-    const nextVideoIndex = (currentVideoIndex + 1) % module.videos.length;
+    const nextVideoIndex = currentVideoIndex + 1;
 
     // Pause the current video
     if (videoRefs.current[currentVideoIndex]) {
       videoRefs.current[currentVideoIndex].pause();
     }
 
-    setModule({
-      ...module,
-      videos: module.videos.map((video, index) => ({
-        ...video,
-        isPlaying: index === nextVideoIndex,
-      })),
-    });
+    if (nextVideoIndex < module.videos.length) {
+      setModule({
+        ...module,
+        videos: module.videos.map((video, index) => ({
+          ...video,
+          isPlaying: index === nextVideoIndex,
+        })),
+      });
+    } else {
+      setAllVideosFinished(true);
+    }
   };
 
   const playPrevVideo = (currentVideoId) => {
     const currentVideoIndex = module.videos.findIndex(
       (video) => video.id === currentVideoId
     );
-    const prevVideoIndex =
-      (currentVideoIndex - 1 + module.videos.length) % module.videos.length;
+    const prevVideoIndex = currentVideoIndex - 1;
 
     // Pause the current video
     if (videoRefs.current[currentVideoIndex]) {
       videoRefs.current[currentVideoIndex].pause();
     }
 
-    setModule({
-      ...module,
-      videos: module.videos.map((video, index) => ({
-        ...video,
-        isPlaying: index === prevVideoIndex,
-      })),
-    });
+    if (prevVideoIndex >= 0) {
+      setModule({
+        ...module,
+        videos: module.videos.map((video, index) => ({
+          ...video,
+          isPlaying: index === prevVideoIndex,
+        })),
+      });
+    }
   };
 
   const swipperNextVideo = () => {
@@ -132,7 +139,7 @@ const Courses = () => {
                     </div>
                   </div>
                 ))}
-                <button onClick={() => handleShowQuiz(true)} className="p-2">
+                <button onClick={() => setShowQuiz(true)} className="p-2">
                   {t("course.btn.startQuiz")}
                 </button>
               </div>
@@ -141,7 +148,7 @@ const Courses = () => {
         </ul>
         <div className="flex-1 h-[85vh] w-full shadow-md rounded-lg overflow-auto">
           {showQuiz ? (
-            <Quiz id={id} setShowQuiz={handleShowQuiz} quiz={module.questions} />
+            <Quiz id={id} setShowQuiz={setShowQuiz} quiz={module.questions} />
           ) : (
             <div className="bg-white">
               {/* Previous Video Button */}
@@ -183,6 +190,7 @@ const Courses = () => {
                             controlsList="nodownload"
                             className="max-h-[618px] w-full bg-black"
                             controls
+                            onEnded={() => handleVideoEnded(index)} // Handle video end
                           >
                             <source src={video.video} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -193,18 +201,22 @@ const Courses = () => {
                   ))}
               </Swiper>
 
-              {/* Next Video Button */}
-              <button
+              {/* Next/Quiz Button */}
+              <HashLink to='#video'
                 className="link link-hover w-full text-white bg-gray-800 text-center py-3 flex flex-col gap-1 justify-center items-center"
                 onClick={() => {
-                  const playingVideo = module.videos.find((video) => video.isPlaying);
-                  playNextVideo(playingVideo.id);
-                  swipperNextVideo();
+                  if (allVideosFinished) {
+                    setShowQuiz(true); // Start Quiz
+                  } else {
+                    const playingVideo = module.videos.find((video) => video.isPlaying);
+                    playNextVideo(playingVideo.id);
+                    swipperNextVideo();
+                  }
                 }}
               >
-                {t("course.btn.next")}
+                {allVideosFinished ? t("course.btn.startQuiz") : t("course.btn.next")}
                 <FaAngleDown />
-              </button>
+              </HashLink>
             </div>
           )}
         </div>
