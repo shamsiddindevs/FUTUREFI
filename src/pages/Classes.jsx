@@ -8,13 +8,16 @@ import {
   FaDownload,
   FaComments,
   FaMobileAlt,
+  FaGraduationCap,
 } from "react-icons/fa";
-import {BiBarChartAlt, BiLineChart} from "react-icons/bi";
-import {MdDesignServices} from "react-icons/md";
+import { MdOutlineBusinessCenter} from "react-icons/md";
 import {Banner} from "../components/Banner";
 import { FaComputer, } from "react-icons/fa6";
 import clas from "../assets/class1.jpg";
 import { getSwaggerData } from "../components/apiServer";
+import { AiOutlineBank, AiOutlineBook } from "react-icons/ai";
+import { RiAccountCircleLine } from "react-icons/ri";
+import { GiTakeMyMoney } from "react-icons/gi";
 
 
 const Classes = () => {
@@ -130,14 +133,14 @@ const Classes = () => {
 
   const courseData = [
     {
-      icon: <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />,
+      icon: <AiOutlineBook className="text-blue-600 text-4xl mx-auto mb-4" />,
       title: t("classTeach.data.0.title"),
       description:
       t("classTeach.data.0.description"),
       borderColor: "border-blue-200",
     },
     {
-      icon: <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />,
+      icon: <FaGraduationCap className="text-orange-600 text-4xl mx-auto mb-4" />,
       title: t("classTeach.data.1.title"),
       description:
       t("classTeach.data.1.description"),
@@ -145,7 +148,7 @@ const Classes = () => {
     },
     {
       icon: (
-        <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
+        <MdOutlineBusinessCenter className="text-green-600 text-4xl mx-auto mb-4" />
       ),
       title: t("classTeach.data.2.title"),
       description:
@@ -153,14 +156,14 @@ const Classes = () => {
       borderColor: "border-green-200",
     },
     {
-      icon: <BiBarChartAlt className="text-blue-600 text-4xl mx-auto mb-4" />,
+      icon: <AiOutlineBank className="text-blue-600 text-4xl mx-auto mb-4" />,
       title: t("classTeach.data.3.title"),
       description:
       t("classTeach.data.3.description"),
       borderColor: "border-blue-200",
     },
     {
-      icon: <BiLineChart className="text-orange-600 text-4xl mx-auto mb-4" />,
+      icon: <RiAccountCircleLine className="text-orange-600 text-4xl mx-auto mb-4" />,
       title: t("classTeach.data.4.title"),
       description:
       t("classTeach.data.4.description"),
@@ -168,7 +171,7 @@ const Classes = () => {
     },
     {
       icon: (
-        <MdDesignServices className="text-green-600 text-4xl mx-auto mb-4" />
+        <GiTakeMyMoney className="text-green-600 text-4xl mx-auto mb-4" />
       ),
       title: t("classTeach.data.5.title"),
       description:
