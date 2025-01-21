@@ -1,17 +1,27 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import axios from "axios";
 import {getSwaggerData} from "../components/apiServer";
 import {useParams} from "react-router-dom";
 import cubs from "../assets/cubs.jpg";
 import Quiz from "./Quest";
-import { t } from "i18next";
+import {t} from "i18next";
+import {FaAngleDown, FaAngleUp} from "react-icons/fa";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Navigation} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Courses = () => {
+  const videoRef = useRef(null)
+
+  const [swiper, setSwiper] = useState(null);
 
   const [module, setModule] = useState(null);
-  const [showQuiz, setShowQuiz] = useState(localStorage.getItem("showQuiz")&&false);
- 
-  function handleShowQuiz(type){
+  const [showQuiz, setShowQuiz] = useState(
+    localStorage.getItem("showQuiz") && false
+  );
+
+  function handleShowQuiz(type) {
     setShowQuiz(type);
     localStorage.setItem("showQuiz", type);
   }
@@ -40,6 +50,12 @@ const Courses = () => {
     const currentVideoIndex = module.videos.findIndex(
       (video) => video.id === currentVideoId
     );
+    const currentVideo = module.videos.find(
+      (video) => video.id === currentVideoId
+    );
+   console.log(currentVideo);
+   
+    
     const nextVideoIndex = (currentVideoIndex + 1) % module.videos.length;
     setModule({
       ...module,
@@ -83,6 +99,18 @@ const Courses = () => {
     }
   }, [module]);
 
+  const swipperNextVideo = () => {
+    if (swiper) {
+      swiper.slideNext();
+    }
+  };
+
+  const swipperPrevVideo = () => {
+    if (swiper) {
+      swiper.slidePrev();
+    }
+  };
+
   return (
     <div className="px-2 pt-2 bg-gray-200 h-full mt-[88px]">
       <div className="flex flex-col md:flex-row gap-2">
@@ -119,68 +147,132 @@ const Courses = () => {
                 <button
                   onClick={() => handleShowQuiz(true)}
                   className="p-2">
-                 {t("course.btn.startQuiz")}
+                  {t("course.btn.startQuiz")}
                 </button>
               </div>
             </li>
           )}
         </ul>
-        <div className="flex-1 h-[85vh] w-full max-w-[1320px] mx-auto shadow-md rounded-lg overflow-auto">
+        <div className="flex-1 h-[85vh] w-full  shadow-md rounded-lg overflow-auto">
           {showQuiz ? (
-            <Quiz id={id} setShowQuiz={handleShowQuiz} quiz = {module.questions} />
+            <Quiz
+              id={id}
+              setShowQuiz={handleShowQuiz}
+              quiz={module.questions}
+            />
           ) : (
-            module &&
-            module.videos.map(
-              (video) =>
-                video.isPlaying &&
-                video.video && (
-                  <div key={video.id}>
-                    <div className="flex-1 h-[75vh] w-full bg-white shadow-md rounded-lg overflow-hidden">
-                      <video
-                        controlsList="nodownload"
-                        className="h-full w-full bg-black"
-                        controls>
-                        <source
-                          src={video.video}
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div className="flex items-center justify-between h-full py-1 px-2 bg-white rounded-lg mt-1">
-                      <button
-                        className="btn btn-primary btn-md"
-                        onClick={() => playPrevVideo(video.id)}
-                        disabled={
-                          module.videos.findIndex((v) => v.id === video.id) ===
-                          0
-                        }>
-                         {t("course.btn.prev")}
-                      </button>
-                      <h3 className="font-semibold text-sm md:text-md capitalize">
-                        {video.id}. {video.name}
-                      </h3>
-                      {module.videos.findIndex((v) => v.id === video.id) ===
-                      module.videos.length - 1 ? (
+            <div className="bg-white">
+              {/* btn prew */}
+              <div className="text-center ">
+                {module &&
+                  module.videos.map(
+                    (video) =>
+                      video.isPlaying &&
+                      video.video && (
                         <button
-                          onClick={() => setShowQuiz(true)}
-                          className="btn btn-primary btn-md">
-                          {t("course.btn.startQuiz")}
+                          key={video.id}
+                          className=".swiper-button-prev link link-hover w-full text-white bg-gray-800 text-center py-3 flex flex-col gap-1 justify-center items-center"
+                          onClick={() => {
+                            playPrevVideo(video.id);
+                            swipperPrevVideo();
+                          }}
+                          disabled={
+                            module.videos.findIndex(
+                              (v) => v.id === video.id
+                            ) === 0
+                          }>
+                          <span>
+                            <FaAngleUp />
+                          </span>
+                          {t("course.btn.prev")}
                         </button>
-                      ) : (
-                        <button
-                          className="btn btn-primary btn-md"
-                          onClick={() => playNextVideo(video.id)}>
-                         {t("course.btn.next")}
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                )
-            )
+                      )
+                  )}
+              </div>
+              {/* swipper */}
+              <Swiper
+                direction="vertical"
+                id="videoContainer"
+                slidesPerView={1}
+                spaceBetween={30}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }}
+                allowTouchMove={false}
+                speed={1000}
+                modules={[Navigation]}
+                className="h-[900px] xl:max-h-[1000px]"
+                onSwiper={setSwiper}>
+                {module &&
+                  module.videos.map(
+                    (video) =>
+                      video.video && (
+                        <SwiperSlide key={video.id}>
+                          
+                          <div
+                            key={video.id}
+                            className=" text-center overflow-hidden "
+                            id="videoContainer">
+                            <div className="border-b-2 border-b-yellow-500">
+                              <h3 className=" inline-block  text-xl font-bold md:text-2xl lg:text-4xl capitalize text-center py-5 my-16 relative before:content-[''] before:absolute before:w-20 before:h-1 before:bg-yellow-500 before:bottom-0 before:left-0 mx-auto ">
+                                {video.name}
+                              </h3>
+                            </div>
+                            <div className="max-w-[1100px]  mx-auto my-10">
+                              <video
+                                ref={videoRef}
+                                controlsList="nodownload"
+                                className="max-h-[618px] w-full bg-black"
+                                controls>
+                                <source
+                                  src={video.video}
+                                  type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                              </video>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                      )
+                  )}
+              </Swiper>
+
+              
+
+              {/* btn next */}
+              <div className="bg-white rounded-lg ">
+                {module &&
+                  module.videos.map(
+                    (video) =>
+                      video.isPlaying &&
+                      video.video && (
+                        <div key={video.id}>
+                          {module.videos.findIndex((v) => v.id === video.id) ===
+                          module.videos.length - 1 ? (
+                            <button
+                              onClick={() => setShowQuiz(true)}
+                              className="link link-hover w-full text-white bg-gray-800 text-center py-3 flex flex-col gap-1 justify-center items-center">
+                              {t("course.btn.startQuiz")}
+                            </button>
+                          ) : (
+                            <a
+                              href="#videoContainer"
+                              className=" link link-hover w-full text-white bg-gray-800 text-center py-3 flex flex-col gap-1 justify-center items-center"
+                              onClick={() => {playNextVideo(video.id); swipperNextVideo()}}>
+                              {t("course.btn.next")}
+                              <span>
+                                <FaAngleDown />
+                              </span>
+                            </a>
+                          )}
+                        </div>
+                      )
+                  )}
+              </div>
+            </div>
           )}
         </div>
-        
       </div>
     </div>
   );

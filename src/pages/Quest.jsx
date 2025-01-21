@@ -2,6 +2,7 @@ import { t } from "i18next";
 import {useState} from "react";
 import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { HashLink } from "react-router-hash-link";
 
 const QuizResultss = ({score, totalQuestions, onRetake,setShowQuiz}) => {
   const passingScore = 80;
@@ -38,11 +39,11 @@ const QuizResultss = ({score, totalQuestions, onRetake,setShowQuiz}) => {
         onClick={onRetake}>
        {t("quiz.quizResults.buttons.retakeQuiz")}
       </button>
-      <button
+      <HashLink to='/courseIntro#'
         className="btn btn-secondary mt-6"
         onClick={()=>setShowQuiz(false)}>
         {t("quiz.quizResults.buttons.restartModule")}
-      </button>
+      </HashLink>
     </div>
   );
 };
