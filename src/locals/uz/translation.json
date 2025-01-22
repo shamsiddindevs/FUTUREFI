@@ -3,8 +3,8 @@
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
     "contact": "Bog'lanish",
-    "online_courses": "Online kurslar",
-    "online_classes": "Online darslar"
+    "online_courses": "Onlayn kurslar",
+    "online_classes": "Onlayn darslar"
   },
   "hero": {
     "title": "Yarating",
@@ -48,9 +48,8 @@
       },
       {
         "title": "Onlayn Kurslar",
-        "message0": "Bizning kurslarimiz bepul taqdim etiladi va o‘rganishni mustahkamlash uchun oxirida testlar mavjud.",
-        "link":" Hozirgi kurslarimiz bilan bu yerda tanishing .",
-        "message1":" Kurslar asosan o‘rta maktab o‘quvchilari uchun mo‘ljallangan bo‘lsa-da, o‘rganishni istagan har bir kishi uchun ochiq!"
+        "message0": "Bizning kurslarimiz bepul taqdim etiladi va o‘rganishni mustahkamlash uchun oxirida testlar mavjud.  Kurslar asosan o‘rta maktab o‘quvchilari uchun mo‘ljallangan bo‘lsa-da, o‘rganishni istagan har bir kishi uchun ochiq!",
+        "link":" Hozirgi kurslarimiz bilan bu yerda tanishing ."
       },
       {
         "title": "Kasbni o‘rganish: ",

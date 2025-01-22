@@ -43,8 +43,8 @@ const StudentProfiles = () => {
           </h3>
           <p className="mt-4 text-gray-700 text-center">
             {t("what_we_offer.cards.1.message0")} 
-            <HashLink className="text-primary" to="/classes#">{t("what_we_offer.cards.1.link")}</HashLink>
-            {t("what_we_offer.cards.1.message1")} 
+            <HashLink className="text-primary" to="/courseIntro#">{t("what_we_offer.cards.1.link")}</HashLink>
+            
           </p>
         </div>
 

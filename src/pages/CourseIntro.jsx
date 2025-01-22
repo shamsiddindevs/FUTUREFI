@@ -42,13 +42,13 @@ const CourseIntro = () => {
         </video>
 
         {/* Overlay */}
-        <div
-          className="absolute inset-0 bg-black bg-opacity-60"
+        <div 
+          className=" absolute inset-0 bg-black bg-opacity-60"
           aria-hidden="true"></div>
 
         {/* Content */}
         <div className="relative container max-w-[1320px] mx-auto px-5">
-          <h1 className="text-5xl font-semibold mt-20  pt-32 pb-48 text-white">
+          <h1 className="text-3xl font-semibold lg:text-5xl lg:font-bold mt-20  pt-32 pb-48 text-yellow-500">
             {t("course.title")}
           </h1>
         </div>
