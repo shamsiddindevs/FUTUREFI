@@ -57,7 +57,10 @@ const Hero = () => {
               {t("hero.title")} <br />{" "}
               <span
                 ref={el}
-                className="text-yellow-500 min-w-[500px] lg:text-[50px]" style={{textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)"}}></span>
+                className="text-yellow-500 min-w-[500px] lg:text-[50px] inline-block"
+                style={{
+                  textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)",
+                }}></span>
             </h1>
             <p className="lg:text-xl mb-5">{t("hero.info")}</p>
             <div className="btn_group   flex gap-2  flex-wrap mb-5">
@@ -107,12 +110,13 @@ const Hero = () => {
           </div>
           <div className=" flex-1">
             <img
-            loading="lazy" 
+              loading="lazy"
               src={hero}
               alt="hero image"
               className="rounded-3xl object-cover w-full"
+              width="800"
+              height="600"
             />
-           
           </div>
         </div>
       </div>
