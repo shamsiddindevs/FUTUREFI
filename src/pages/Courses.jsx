@@ -204,6 +204,8 @@ const Courses = () => {
                         </div>
                         <div className="max-w-[1100px] mx-auto my-10">
                           <video
+                          poster={cubs}
+                            loading="lazy"
                             ref={(el) => (videoRefs.current[index] = el)}
                             controlsList="nodownload"
                             className="h-[500px] w-[90%] md:h-[600px] md:w-[90%] lg:h-[618px] lg:w-[1000px] mx-auto bg-black"

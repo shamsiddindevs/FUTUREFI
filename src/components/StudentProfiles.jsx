@@ -15,7 +15,7 @@ const StudentProfiles = () => {
         {/* University Students Card */}
         <div className="p-8 bg-white rounded-lg shadow-lg border-t-4 border-yellow-500">
           <div className="text-blue-500 text-5xl mb-4">
-            <img
+            <img loading="lazy"
               src={onlineClass}
               className="w-12 mx-auto"
               alt="onlineClass"
@@ -33,6 +33,7 @@ const StudentProfiles = () => {
         <div className="p-8 bg-white rounded-lg shadow-lg border-t-4 border-yellow-500">
           <div className="text-orange-500 text-5xl mb-4">
             <img
+            loading="lazy"
               src={onlineCourse}
               className="w-12 mx-auto"
               alt="onlineClass"
@@ -52,6 +53,7 @@ const StudentProfiles = () => {
         <div className="p-8 bg-white rounded-lg shadow-lg border-t-4 border-yellow-500">
           <div className="text-green-500 text-5xl mb-4">
             <img
+            loading="lazy"
               src={career}
               className="w-12 mx-auto"
               alt="onlineClass"

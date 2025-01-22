@@ -21,6 +21,7 @@ const Footer = () => {
             to={"/"}
             className="flex items-center gap-2 mb-4">
             <img
+            loading="lazy"
               src={logo}
               alt="FUTUREFI
 Network Logo"
@@ -60,11 +61,11 @@ Network Logo"
         <div className="">
           <h3 className="font-semibold text-lg mb-2"> {t("footer.documents")} </h3>
           <div className="flex gap-6 mt-6 text-lg">
-           <a href="https://t.me/+9cpRoGYBvqswZDky">
+           <a href="https://t.me/+9cpRoGYBvqswZDky" aria-label="link for telegram" target="_blank">
            <FaTelegramPlane className="text-gray-500 hover:text-blue-400 cursor-pointer" />
            </a>
           
-           <a href="https://www.youtube.com/@FutureFiNetwork" target="_blank">
+           <a href="https://www.youtube.com/@FutureFiNetwork" target="_blank" aria-label="link for youtube">
            <FaYoutube className="text-gray-500 hover:text-red-500 cursor-pointer" />
            </a>
            

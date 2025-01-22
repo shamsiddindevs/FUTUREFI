@@ -32,6 +32,7 @@ const Navbar = () => {
         <div className=" w-full   px-5 py-5">
           <nav className="flex items-center justify-between">
             <HashLink
+             
               to={"/#"}
               className="flex items-center gap-1">
               <img
@@ -47,6 +48,7 @@ const Navbar = () => {
             </HashLink>
             <div className="hidden lg:flex gap-1">
               <HashLink
+             
                 to="/#"
                 className="nav_link">
                 {t("nav.home")}
@@ -57,16 +59,19 @@ const Navbar = () => {
                 {t("nav.about")}
               </HashLink>
               <HashLink
+           
                 to={"/classes#"}
                 className="nav_link">
                 {t("nav.online_classes")}
               </HashLink>
               <HashLink
+             
                 to={"/courseIntro#"}
                 className="nav_link">
                 {t("nav.online_courses")}
               </HashLink>
               <HashLink
+             
                 to="/#contact"
                 className="nav_link">
                 {t("nav.contact")}
@@ -84,12 +89,14 @@ const Navbar = () => {
                     toggleLang();
                   }}>
                   <img
+                  loading="lazy"
                     src={lang == "uz" ? uzb : lang == "ru" ? russian : eng}
                     alt="Language"
                     className="h-6"
                   />
                   {isRotate ? (
                     <svg
+                    loading="lazy"
                       className="h-4 w-4"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -102,6 +109,7 @@ const Navbar = () => {
                     </svg>
                   ) : (
                     <svg
+                    loading="lazy"
                       className="h-4 w-4 rotate-180"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -121,6 +129,7 @@ const Navbar = () => {
                     onClick={() => changeLanguage("uz")}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <img
+                    loading="lazy"
                       src={uzb}
                       alt="Language"
                       className="h-6"
@@ -130,6 +139,7 @@ const Navbar = () => {
                     onClick={() => changeLanguage("ru")}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <img
+                    loading="lazy"
                       src={russian}
                       alt="Language"
                       className="h-6"
@@ -139,6 +149,7 @@ const Navbar = () => {
                     onClick={() => changeLanguage("en")}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <img
+                    loading="lazy"
                       src={eng}
                       alt="Language"
                       className="h-6"
@@ -147,10 +158,10 @@ const Navbar = () => {
                 </ul>
               </div>
               <p className="hidden md:block font-semibold ">
-                <span className="text-yellow-500">99 </span>829 33 03
+                <span  className="text-yellow-700 text-base">99 </span>829 33 03
               </p>
 
-              <button
+              <button id="hamburgerMenu" aria-label="toggle menu"
                 className="inline-flex lg:hidden items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-200 hover:text-accent-foreground h-10 w-10 outline-none"
                 onClick={() => setOverlay(!overlay)}>
                 <svg
@@ -201,30 +212,35 @@ const Navbar = () => {
           </div>
           <div className="flex py-12 flex-col gap-1">
             <HashLink
+           
               onClick={() => setOverlay(!overlay)}
               href="/#"
               className="nav_link">
               {t("nav.home")}
             </HashLink>
             <HashLink
+           
               onClick={() => setOverlay(!overlay)}
               to="/#about"
               className="nav_link">
               {t("nav.about")}
             </HashLink>
             <HashLink
+           
               onClick={() => setOverlay(!overlay)}
               to={"/classes/#"}
               className="nav_link">
               {t("nav.online_classes")}
             </HashLink>
             <HashLink
+           
               onClick={() => setOverlay(!overlay)}
               className="nav_link"
               to={"/courseIntro"}>
               {t("nav.online_courses")}
             </HashLink>
             <HashLink
+           
               onClick={() => setOverlay(!overlay)}
               to="/#contact"
               className="nav_link">

@@ -57,51 +57,51 @@ const Hero = () => {
               {t("hero.title")} <br />{" "}
               <span
                 ref={el}
-                className="text-yellow-500 min-w-[500px] text-[50px]"></span>
+                className="text-yellow-500 min-w-[500px] lg:text-[50px]" style={{textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)"}}></span>
             </h1>
             <p className="lg:text-xl mb-5">{t("hero.info")}</p>
             <div className="btn_group   flex gap-2  flex-wrap mb-5">
               <Link
                 to="/courseIntro"
-                className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  btn_text">
+                className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  text-gray-900">
                 {t("hero.cta")}
               </Link>
               <HashLink
                 to="/classes#contact"
-                className="border border-yellow-500 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-yellow-500  hover:btn_text">
+                className="border border-gray-900 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-gray-900  hover:text-gray-900">
                 {t("hero.cta2")}
               </HashLink>
             </div>
             <div className=" flex gap-10">
               <div className=" font-semibold">
                 <CountUp
-                  className="text-[30px] font-medium"
+                  className="text-2xl lg:text-[30px] font-medium"
                   start={0}
                   end={statistics?.moduls}
                   duration={3}
                   separator=","
                 />
-                <p className="text-lg">{t("hero.count.module")}</p>
+                <p className="lg:text-lg">{t("hero.count.module")}</p>
               </div>
               <div className=" font-semibold">
                 <CountUp
-                  className="text-[30px] font-medium"
+                  className="text-2xl lg:text-[30px] font-medium"
                   start={0}
                   end={statistics?.videos}
                   duration={3}
                   separator=","
                 />
-                <p className="text-lg"> {t("hero.count.lesson")} </p>
+                <p className="lg:text-lg"> {t("hero.count.lesson")} </p>
               </div>
               <div className=" font-semibold">
                 <CountUp
-                  className="text-[30px] font-medium"
+                  className="text-2xl lg:text-[30px] font-medium"
                   start={0}
                   end={statistics?.views}
                   duration={3}
                   separator=","
                 />
-                <p className="text-lg">{t("hero.count.view")}</p>
+                <p className="lg:text-lg">{t("hero.count.view")}</p>
               </div>
             </div>
           </div>
@@ -110,16 +110,9 @@ const Hero = () => {
             loading="lazy" 
               src={hero}
               alt="hero image"
-              className="rounded-3xl skeleton object-cover w-full"
+              className="rounded-3xl object-cover w-full"
             />
-            {/* <svg
-              className="w-12 h-12 text-yellow-100 dark:text-gray-600"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 18">
-              <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-            </svg> */}
+           
           </div>
         </div>
       </div>

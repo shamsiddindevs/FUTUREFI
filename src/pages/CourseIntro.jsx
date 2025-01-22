@@ -96,11 +96,11 @@ const CourseIntro = () => {
                       <div className="flex items-end justify-between gap-10">
                         <div className="flex flex-col gap-2">
                           <p className="flex items-center gap-2">
-                            <img className="-ml-1" src={video} alt=" video icon" />
+                            <img loading="lazy" className="-ml-1" src={video} alt=" video icon" />
                             <strong>{t("course.courseIntro.videos")}:</strong> {module.videos_count}
                           </p>
                           <p className="flex items-center gap-2">
-                            <img className="ml-0" src={ques} alt="quiz icon" />
+                            <img loading="lazy" className="ml-0" src={ques} alt="quiz icon" />
                             <strong>{t("course.courseIntro.tests")}:</strong> {module.questions_count}
                           </p>
                         </div>

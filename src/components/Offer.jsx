@@ -29,6 +29,7 @@ const HeroSection = () => {
           <div className="absolute z-20 bottom-0 -left-6 w-16 h-16 bg-green-500 rounded-full"></div>
           <div className="absolute z-20 top-16 right-10 w-12 h-12 bg-blue-500 rounded-full"></div>
           <img
+          loading="lazy"
             src={hero}
             alt="Professional"
             className="relative rounded-xl shadow-lg z-10"

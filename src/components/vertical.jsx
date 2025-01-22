@@ -32,6 +32,7 @@ const VerticalSlider = () => {
         {images.map((item, index) => (
           <SwiperSlide key={index}>
             <img
+            loading="lazy"
               src={item.image} // Update this to match your API response key
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover rounded-lg"
