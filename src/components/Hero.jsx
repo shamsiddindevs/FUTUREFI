@@ -57,9 +57,9 @@ const Hero = () => {
               {t("hero.title")} <br />{" "}
               <span
                 ref={el}
-                className="text-yellow-500 min-w-[500px] lg:text-[50px] inline-block"
+                className="text-yellow-500 min-w-[500px] lg:text-[50px] "
                 style={{
-                  textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)",
+                  textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)"
                 }}></span>
             </h1>
             <p className="lg:text-xl mb-5">{t("hero.info")}</p>
