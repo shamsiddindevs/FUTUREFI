@@ -110,7 +110,7 @@ const Quiz = () => {
             {questions?.map((question, index) => (
               <div
                 key={question.id}
-                className={`border scale-95  absolute top-10 left-0 w-full min-h-[700px]  bg-white rounded-lg shadow-lg py-20 px-40 flex flex-col gap-10 transition-transform duration-500 ${
+                className={` scale-95  absolute top-10 left-0 w-full min-h-[700px]  bg-white rounded-lg shadow-lg py-20 px-40 flex flex-col gap-10 transition-transform duration-500 ${
                   index === currentQuestion
                     ? "z-30 translate-y-0 opacity-100 "
                     : index < currentQuestion
