@@ -49,98 +49,103 @@ const QuizResultss = ({score, totalQuestions, onRetake,setShowQuiz}) => {
 };
 
 const Quiz = (props) => {
-  console.log(props);
-  const {quiz: questions, setShowQuiz} = props;
-
-
-
+  const { quiz: questions, setShowQuiz } = props;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isTestFinished, setIsTestFinished] = useState(false);
-  const [result, setResult] = useState(null);
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   };
 
   const handleSubmit = () => {
-   
-
-    const isCorrect = selectedOption.is_correct;
-
-    if (isCorrect) {
-      setScore(score + 100 / questions?.length); // Update score dynamically
+    if (selectedOption && selectedOption.is_correct) {
+      setScore(score + 100 / questions?.length);
     }
-
-    setResult(true);
+    handleNext();
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions?.length - 1) {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
-      setResult(null);
     } else {
-      setIsTestFinished(true); // Mark the test as finished
+      setIsTestFinished(true);
     }
   };
 
+  const handleBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      setSelectedOption(null);
+    }
+  };
   const handleRetake = () => {
     setCurrentQuestion(0);
     setScore(0);
     setSelectedOption(null);
-    setResult(null);
     setIsTestFinished(false);
   };
 
   return (
-    <div className="h-full">
+    <div className="relative w-full h-screen flex flex-col items-center justify-center bg-gray-100">
       {!isTestFinished ? (
-        <div className="flex justify-center items-center h-full bg-gray-100">
-          <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-md">
-            <h2 className="text-lg font-bold mb-4">
-              {t("quiz.title")} {currentQuestion + 1}/{questions?.length}
-            </h2>
-            <p className="mb-4">{questions[currentQuestion]?.name}</p>
-            <div className="flex flex-col gap-2">
-              {questions[currentQuestion]?.options?.map((option) => (
-                <label
-                  key={option.id}
-                  className="cursor-pointer flex items-center">
-                  <input
-                    type="radio"
-                    name="option"
-                    value={option.id}
-                    className="radio radio-primary mr-2"
-                    checked={selectedOption?.id === option?.id}
-                    onChange={() => handleOptionChange(option)}
-                  />
-                  {option.name}
-                </label>
-              ))}
-            </div>
-            <button
-              className="btn btn-primary mt-4 w-full"
-              onClick={handleSubmit}>
-              {t("quiz.start")}
-            </button>
-            {!selectedOption && (
-              <div className="mt-4 p-2 rounded-md text-gray-800 bg-green-200">
-                {t("quiz.unselect")}
-              </div>
-            )}
-            {result && (
-              <button
-                className="btn btn-secondary mt-4 w-full"
-                onClick={handleNext}>
-                {currentQuestion < questions.length - 1
-                  ? t("quiz.next")
-                  : t("quiz.result")}
-              </button>
-            )}
+        <>
+          <div className="absolute top-10 text-center text-yellow-500 font-semibold">
+            {t("quiz.title")} {currentQuestion + 1}/{questions?.length}
           </div>
-        </div>
+          <div className="relative w-full max-w-[500px] h-full max-h-[400px] overflow-hidden">
+            {questions?.map((question, index) => (
+              <div
+                key={question.id}
+                className={`border border-yellow-500 absolute top-10 left-0 w-full min-h-[300px] bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between transition-transform duration-500 ${
+                  index === currentQuestion
+                    ? "z-30 translate-y-0 opacity-100"
+                    : index < currentQuestion
+                    ? "z-40 translate-y-[200%] opacity-100"
+                    : "z-10 -translate-y-4 opacity-100"
+                }`}
+                style={{
+                  transform: index === currentQuestion ? "translateY(0)" : undefined,
+                }}
+              >
+                <h2 className="text-lg font-semibold mb-4">{question.name}</h2>
+                <div className="flex flex-col space-y-2">
+                  {question.options.map((option) => (
+                    <label key={option.id} className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name={`question-${index}`}
+                        className="w-4 h-4"
+                        checked={selectedOption?.id === option.id}
+                        onChange={() => handleOptionChange(option)}
+                      />
+                      <span>{option.name}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="absolute bottom-10 flex space-x-4 z-[99]">
+            <button
+              onClick={handleBack}
+              disabled={currentQuestion === 0}
+              className={`px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 ${
+                currentQuestion === 0 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              {t("quiz.back")}
+            </button>
+            <button
+              onClick={handleSubmit}
+              className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600"
+            >
+              {currentQuestion === questions.length - 1 ? t("quiz.finish") : t("quiz.next")}
+            </button>
+          </div>
+        </>
       ) : (
         <QuizResultss
           score={Math.round(score)}
@@ -154,3 +159,6 @@ const Quiz = (props) => {
 };
 
 export default Quiz;
+
+
+
