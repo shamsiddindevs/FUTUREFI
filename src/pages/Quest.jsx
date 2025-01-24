@@ -2,6 +2,7 @@ import {t} from "i18next";
 import {useState} from "react";
 import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { MdErrorOutline } from "react-icons/md";
 import {HashLink} from "react-router-hash-link";
 
 const QuizResultss = ({score, totalQuestions, onRetake}) => {
@@ -68,12 +69,18 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isTestFinished, setIsTestFinished] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
+    setShowError(false);
   };
 
   const handleSubmit = () => {
+    if (!selectedOption) {
+      setShowError(true);
+      return;
+    }
     if (selectedOption && selectedOption.is_correct) {
       setScore(score + 100 / questions?.length);
     }
@@ -89,12 +96,6 @@ const Quiz = () => {
     }
   };
 
-  const handleBack = () => {
-    if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
-      setSelectedOption(null);
-    }
-  };
   const handleRetake = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -147,6 +148,11 @@ const Quiz = () => {
                     </label>
                   ))}
                 </div>
+                {showError && (
+                  <p className="error-message text-red-500 flex gap-1 items-center" id="error-message">
+                    <MdErrorOutline /> Please answer the question to continue
+                  </p>
+                )}
                 <div className="  flex space-x-4 z-[99]">
                   <button
                     onClick={handleSubmit}
