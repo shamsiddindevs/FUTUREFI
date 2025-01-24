@@ -190,6 +190,7 @@
      "title": "Test Your Knowledge",
      "start":"Submit",
      "next": "Next Question",
+    "prev": "Previous Question",
      "result":"See Result",
      "answerCorrect":"Correct!",
      "answerIncorrect":"Incorrect!",

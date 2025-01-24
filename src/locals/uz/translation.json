@@ -186,6 +186,7 @@
     "quiz": {
       "title": "Bilimingizni sinang",
       "start": "Yuborish",
+      "prev": "Oldingi Savol",
       "next": "Keyingi savol",
       "result": "Natijalarni ko'rish",
       "answerCorrect": "To'g'ri!",
