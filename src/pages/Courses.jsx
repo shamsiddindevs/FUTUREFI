@@ -97,7 +97,7 @@ const Courses = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        "video_id": currentVideoId
+        video_id: currentVideoId,
       }),
     })
       .then((response) => response.json())
@@ -203,6 +203,7 @@ const Courses = () => {
               </button>
 
               <Swiper
+                allowTouchMove={false} 
                 direction={swiperDirection}
                 slidesPerView={1}
                 spaceBetween={30}
