@@ -103,7 +103,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="relative w-full h-[1000px] flex flex-col items-center justify-center bg-gray-100 py-20">
+    <div className="relative w-full h-[1060px] flex flex-col items-center justify-center bg-gray-100 py-20">
       {!isTestFinished ? (
         <>
           <div className="relative w-full max-w-[1020px] h-full max-h-[1060px] overflow-hidden">

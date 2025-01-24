@@ -58,20 +58,18 @@ const Hero = () => {
               <span
                 ref={el}
                 className="text-yellow-500 min-w-[500px] lg:text-[50px] "
-                style={{
-                  textShadow: "2px 2px 2px rgba(50, 50, 50, 0.4)"
-                }}></span>
+                ></span>
             </h1>
             <p className="lg:text-xl mb-5">{t("hero.info")}</p>
             <div className="btn_group   flex gap-2  flex-wrap mb-5">
               <Link
                 to="/courseIntro"
-                className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  text-gray-900">
+                className="font-medium  transition-colors  bg-yellow-500  hover:bg-yellow-600 py-2.5 rounded-md px-8  text-white">
                 {t("hero.cta")}
               </Link>
               <HashLink
                 to="/classes#contact"
-                className="border border-gray-900 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-gray-900  hover:text-gray-900">
+                className="border border-yellow-500 border-spacing-2 font-medium  transition-colors  hover:bg-yellow-500  bg-white py-2.5 rounded-md px-8 text-yellow-500  hover:text-white">
                 {t("hero.cta2")}
               </HashLink>
             </div>
