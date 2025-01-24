@@ -96,7 +96,9 @@ const Courses = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({videoId: currentVideoId}),
+      body: JSON.stringify({
+        "video_id": currentVideoId
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
