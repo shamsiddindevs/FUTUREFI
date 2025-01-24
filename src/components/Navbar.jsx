@@ -77,9 +77,9 @@ const Navbar = () => {
                 {t("nav.contact")}
               </HashLink>
             </div>
-            <div className="flex items-center gap-4 ">
+            <div className=" flex items-center gap-4 ">
               {/* Language Selector */}
-              <div className="relative  block">
+              <div className="relative   block">
                 <button
                   className="flex items-center  space-x-2 text-black focus:outline-none"
                   onClick={() => {
@@ -124,7 +124,7 @@ const Navbar = () => {
                 </button>
                 <ul
                   id="language"
-                  className="absolute right-0 mt-2 w-14 bg-white shadow-lg rounded-md hidden ">
+                  className="absolute  right-0 mt-2 w-14 bg-white shadow-lg rounded-md hidden ">
                   <li
                     onClick={() => changeLanguage("uz")}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer">

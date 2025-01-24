@@ -91,6 +91,20 @@ const Courses = () => {
     } else {
       setAllVideosFinished(true);
     }
+    fetch("https://mission.uz/en/api/v1/add-view/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({videoId: currentVideoId}),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Video view added:", data);
+      })
+      .catch((error) => {
+        console.error("Error adding video view:", error);
+      });
   };
 
   const playPrevVideo = (currentVideoId) => {
@@ -170,9 +184,7 @@ const Courses = () => {
         </ul>
         <div className="flex-1 h-[85vh] w-full shadow-md rounded-lg overflow-auto">
           {showQuiz ? (
-            <Quiz
-              id={id}
-            />
+            <Quiz id={id} />
           ) : (
             <div className="bg-white">
               <button
@@ -209,7 +221,7 @@ const Courses = () => {
                         </div>
                         <div className="max-w-[1100px] mx-auto my-10">
                           <video
-                          poster={cubs}
+                            poster={cubs}
                             loading="lazy"
                             ref={(el) => (videoRefs.current[index] = el)}
                             controlsList="nodownload"
