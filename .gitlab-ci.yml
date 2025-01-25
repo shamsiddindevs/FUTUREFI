@@ -21,3 +21,4 @@ deploy_job:
     - ssh $USER@$IP "rm -rf /var/www/html/*"
     - ssh $USER@$IP "mkdir -p /var/www/html"
     - rsync -avz dist/ $USER@$IP:/var/www/html/
+    
