@@ -20,10 +20,12 @@ const ContactForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+  
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = `https://mission.uz/en/api/v1/feedbacks/`;
+    const url = `${BASE_URL}/en/api/v1/feedbacks/`;
 
     try {
       const response = await fetch(url, {
