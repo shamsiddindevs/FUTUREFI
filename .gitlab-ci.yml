@@ -5,7 +5,9 @@ deploy_job:
   stage: deploy
   image: node:18-alpine
   tags:
-    - aws_docker
+    - docker
+    - gcp
+    - edde
   before_script:
     - apk add --no-cache openssh-client rsync
     - mkdir -p ~/.ssh
