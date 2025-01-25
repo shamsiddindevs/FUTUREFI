@@ -104,14 +104,14 @@ const Quiz = () => {
   };
 
   return (
-    <div className="relative w-full h-[1060px] flex flex-col items-center justify-center bg-gray-100 py-20">
+    <div className="relative w-full h-[1060px] flex flex-col items-center justify-center bg-gray-100 py-10 lg:py-20 px-4">
       {!isTestFinished ? (
         <>
           <div className="relative w-full max-w-[1020px] h-full max-h-[1060px] overflow-hidden">
             {questions?.map((question, index) => (
               <div
                 key={question.id}
-                className={` scale-95  absolute top-10 left-0 w-full min-h-[700px]  bg-white rounded-lg shadow-lg py-20 px-40 flex flex-col gap-10 transition-transform duration-500 ${
+                className={` scale-95  absolute top-10 left-0 w-full min-h-[700px]  bg-white rounded-lg shadow-lg py-10 lg:py-20 px-10 md:px-20 lg:px-40 flex flex-col gap-10 transition-transform duration-500 ${
                   index === currentQuestion
                     ? "z-30 translate-y-0 opacity-100 "
                     : index < currentQuestion
@@ -136,7 +136,7 @@ const Quiz = () => {
                   {question.options.map((option) => (
                     <label
                       key={option.id}
-                      className=" label-text text-lg hover:bg-gray-50 rounded-md p-5 flex items-center  space-x-4">
+                      className=" label-text text-lg hover:bg-gray-50 rounded-md py-2 lg:p-5 flex items-center  space-x-4">
                       <input
                         type="radio"
                         name={`question-${index}`}

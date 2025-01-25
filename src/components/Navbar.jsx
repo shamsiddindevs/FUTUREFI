@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className=" transition-colors fixed top-0 w-full z-10 backdrop-blur-xl">
+      <header className=" transition-colors fixed top-0 w-full z-[9999] backdrop-blur-xl">
         <div className=" w-full   px-5 py-5">
           <nav className="flex items-center justify-between">
             <HashLink
