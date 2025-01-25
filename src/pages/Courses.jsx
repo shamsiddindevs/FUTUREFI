@@ -2,7 +2,7 @@ import {useState, useEffect, useRef} from "react";
 
 import {getSwaggerData} from "../components/apiServer";
 import {useParams} from "react-router-dom";
-import cubs from "../assets/cubs.jpg";
+import cubs from "../assets/poster.png";
 import Quiz from "./Quest";
 import {t} from "i18next";
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";

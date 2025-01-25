@@ -106,6 +106,9 @@ const CourseIntro = () => {
                         </div>
                         <div className="info_group flex flex-wrap gap-4 items-center justify-between">
                           <Link
+                          onClick={() => {
+                            localStorage.setItem("showQuiz", false);
+                          }}
                             to={`/courses/${module.id}`}
                             className="btn btn-md btn-primary">
                             {t("course.courseIntro.start")}
