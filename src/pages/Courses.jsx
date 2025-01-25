@@ -3,6 +3,7 @@ import {useState, useEffect, useRef} from "react";
 import {getSwaggerData} from "../components/apiServer";
 import {useParams} from "react-router-dom";
 import cubs from "../assets/poster.png";
+import cub from "../assets/cubs.jpg";
 import Quiz from "./Quest";
 import {t} from "i18next";
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
@@ -150,7 +151,7 @@ const Courses = () => {
             <h1
               className="absolute top-0 left-0 text-2xl text-white w-full h-32 flex items-center p-4 font-bold font-spaceGrotesk mb-6"
               style={{
-                background: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ), url(${cubs})`,
+                background: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ), url(${cub})`,
                 backgroundSize: "cover",
               }}>
               {module ? module.name : "Kurs nomi"}
