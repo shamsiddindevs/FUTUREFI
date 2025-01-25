@@ -1,0 +1,23 @@
+stages:
+  - deploy
+
+deploy_job:
+  stage: deploy
+  image: node:18-alpine
+  tags:
+    - docker
+    - gcp
+    - edde
+  before_script:
+    - apk add --no-cache openssh-client rsync
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H $IP >> ~/.ssh/known_hosts
+  script:
+    - npm install
+    - npm run build
+    - ssh $USER@$IP "rm -rf /var/www/html/*"
+    - ssh $USER@$IP "mkdir -p /var/www/html"
+    - rsync -avz dist/ $USER@$IP:/var/www/html/
