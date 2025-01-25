@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className=" transition-colors fixed top-0 w-full z-[9999] backdrop-blur-xl">
+      <header className=" transition-colors fixed top-0 w-full z-[999] backdrop-blur-xl">
         <div className=" w-full   px-5 py-5">
           <nav className="flex items-center justify-between">
             <HashLink
@@ -199,7 +199,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 ${
           overlay ? "-left-full" : "left-0"
-        }   w-full h-full  z-50 transition-all
+        }   w-full h-full  z-[9999] transition-all
 `}>
         <div
           onClick={() => setOverlay(!overlay)}
