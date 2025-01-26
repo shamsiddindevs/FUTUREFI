@@ -10,10 +10,16 @@ const VerticalSlider = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://mission.uz/ru/api/v1/carousel/")
-      .then((response) => setImages(response.data))
-      .catch((error) => console.error("Error fetching images:", error));
+    const fetchImages = async () => {
+      try {
+        const response = await axios.get("/apiServer/carousel");
+        setImages(response.data);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
   }, []);
 
   return (

@@ -39,15 +39,11 @@ const Classes = () => {
 
   const [categories, setCategories] = useState([]);
 
-  const en = localStorage.getItem('language')
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(
-          `https://mission.uz/${en}/api/v1/appeal-categories/`
-        );
-        const data = await response.json();
-        setCategories(data);
+        const response = await getSwaggerData(`appeal-categories/`);
+        setCategories(response);
       } catch (error) {
         console.error("Error fetching categories:", error);
       }
@@ -55,6 +51,8 @@ const Classes = () => {
 
     fetchCategories();
   }, []);
+
+
 
 
    const [images, setimages] = useState([]);
@@ -87,11 +85,12 @@ const Classes = () => {
         type === "checkbox" ? checked : type === "number" ? +value : value,
     }));
   };
-
+  
+  const BASE_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://mission.uz/en/api/v1/appeal/", {
+      const response = await fetch(`${BASE_URL}/en/api/v1/appeal/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

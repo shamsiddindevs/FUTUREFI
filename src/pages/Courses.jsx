@@ -70,6 +70,7 @@ const Courses = () => {
       setAllVideosFinished(true);
     }
   };
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   const playNextVideo = (currentVideoId) => {
     const currentVideoIndex = module.videos.findIndex(
@@ -92,7 +93,7 @@ const Courses = () => {
     } else {
       setAllVideosFinished(true);
     }
-    fetch("https://mission.uz/en/api/v1/add-view/", {
+    fetch(`${BASE_URL}en/api/v1/add-view/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
