@@ -223,7 +223,7 @@ const Classes = () => {
               </div>
                 <div className="flex-1 grid gap-6">
                   <h3 className="text-2xl font-semibold">{t("class.overview_how")}</h3>
-                  {howClass.map(
+                  {howClass?.map(
                     ({icon: Icon, text, bgColor = "bg-green-100"}, index) => (
                       <div
                         key={index}
@@ -267,7 +267,7 @@ const Classes = () => {
 
         <div className="py-28 bg-white">
           <Banner
-            images={images}
+            images={images && []}
             speed={10000}
           />
         </div>
