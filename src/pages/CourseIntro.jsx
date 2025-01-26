@@ -12,7 +12,7 @@ const CourseIntro = () => {
 
   useEffect(() => {
     getSwaggerData("moduls/").then((data) => {
-      setModules(data.map((module) => ({...module, expanded: false})));
+      setModules(data?.map((module) => ({...module, expanded: false})));
       console.log(data);
     });
   }, []);

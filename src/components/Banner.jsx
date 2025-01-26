@@ -1,7 +1,7 @@
 import './Banner.css'
+import PropTypes from 'prop-types';
 
-
-const Banner = ({ images, speed = 5000 }) => {
+const Banner = ({ images = [], speed = 5000 }) => {
     return (
       <div className="inner">
         <div className="wrapper">
@@ -29,6 +29,16 @@ const Banner = ({ images, speed = 5000 }) => {
         </div>
       </div>
     );
+  };
+  
+  Banner.propTypes = {
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        image: PropTypes.string.isRequired,
+      })
+    ),
+    speed: PropTypes.number,
   };
   
   export { Banner };
