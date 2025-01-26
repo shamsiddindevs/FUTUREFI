@@ -7,7 +7,6 @@ console.log(BASE_URL);
 
 let lang = localStorage.getItem("language") || "en";
 
-
 export const getSwaggerData = async (end) => {
     try {
         const response = await axios.get(`${BASE_URL}${lang}/api/v1/${end}`);
