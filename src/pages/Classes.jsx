@@ -253,7 +253,7 @@ const Classes = () => {
 
         <div className="py-28 bg-white">
           <Banner
-            images={images && []}
+            images={images || []}
             speed={10000}
           />
         </div>
