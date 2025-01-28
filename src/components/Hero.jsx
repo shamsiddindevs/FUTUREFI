@@ -75,13 +75,7 @@ const Hero = () => {
             </div>
             <div className=" flex gap-10">
               <div className=" font-semibold">
-                <CountUp
-                  className="text-2xl lg:text-[30px] font-medium"
-                  start={0}
-                  end={statistics?.moduls}
-                  duration={3}
-                  separator=","
-                />
+                <p className="text-2xl lg:text-[30px] font-medium">6</p>
                 <p className="lg:text-lg">{t("hero.count.module")}</p>
               </div>
               <div className=" font-semibold">
