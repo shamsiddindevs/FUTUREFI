@@ -83,7 +83,7 @@ const CourseIntro = () => {
                       loading="lazy"
                       src={module.image || "https://picsum.photos/200/300"}
                       alt={module.title}
-                      className="h-80 rounded-xl object-cover"
+                      className="h-80 w-60 rounded-xl object-cover"
                     />
                     <div className="flex flex-col gap-10">
                       <div>
