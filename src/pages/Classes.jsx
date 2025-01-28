@@ -85,10 +85,12 @@ const Classes = () => {
         type === "checkbox" ? checked : type === "number" ? +value : value,
     }));
   };
+  const [loading, setLoading] = useState(false)
   
   const BASE_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch(`${BASE_URL}/en/api/v1/appeal/`, {
         method: "POST",
@@ -113,6 +115,8 @@ const Classes = () => {
       }
     } catch (error) {
       toast.error("An error occurred while submitting feedback.");
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -403,11 +407,16 @@ const Classes = () => {
 
               {/* Submit Button */}
               <div className="text-center">
-                <button
+                { loading?<div
+                  className="inline-block px-6 py-3 bg-yellow-300 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
+                   {t("classContact.loading")}
+                </div>:<button
                   type="submit"
                   className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
                    {t("classContact.submitButton")}
                 </button>
+                }
+                
               </div>
             </form>
           </div>
