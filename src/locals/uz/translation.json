@@ -96,7 +96,7 @@
     "title": "Nimani O'rgatamiz",
     "data": [
       {
-        "title": "Boshlang'ich Buxgalteriya",
+        "title": "Mukammal Shaxsiy Moliya",
         "description": "Moliyaviy bilimlaringizni yangi darajaga ko'tarib, murakkab mavzularni o'rganing. Ushbu seriyadan so'ng siz moliyaviy xolatingizni boshqarishni va boylikni oshirishni o'rganasiz!"
       },
       {
@@ -104,19 +104,19 @@
         "description": "Korporativ moliyaning asosiy tushunchalarini, pulning vaqt qiymati, kapital byudjetlash va muhim moliyaviy tushunchalarni o'rganing."
       },
       {
-        "title": "Kasbni O’rganish",
+        "title": "Mukammal Korporativ Moliya",
         "description": "Korporativ moliyaning murakkab mavzularini, jumladan kapital tuzilmasi, qiymatni aniqlash va xavfni boshqarish usullarini o'rganib, strategik moliyaviy qarorlar qabul qilishda yetakchi bo'ling."
       },
       {
-        "title": "Mukammal Buxgalteriya",
+        "title": "Boshlang'ich Buxgalteriya ",
         "description": "Moliyaviy hisobotlar, tranzaksiyalarni qayd etish va asosiy moliyaviy tahlil kabi asosiy tushunchalarni o'rganib, buxgalteriya sohasida mustahkam poydevor yarating."
       },
       {
-        "title": " Mukammal Korporativ Moliya",
+        "title": "Mukammal Buxgalteriya ",
         "description": "Moliyaviy hisobotlar, audit va murakkab moliyaviy tahlil kabi mavzularni chuqur o'rganib, qarorlar qabul qilish ko'nikmalaringizni yaxshilang."
       },
       {
-        "title": "Mukammal Shaxsiy Moliya",
+        "title": "Kasbni O'rganish",
         "description": "Biz yoshlikdan kasbga tayyorlanish muhim deb hisoblaymiz, chunki qayerga yo'nalishingizni bilish juda zarur. Shu sababli, biz ushbu seriyani yaratdik — moliya sohasidagi barcha turli yo'nalishlarni o'rganish va har biri haqida batafsil ma'lumot berish uchun."
       }
     ]

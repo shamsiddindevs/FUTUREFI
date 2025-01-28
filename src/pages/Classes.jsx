@@ -118,10 +118,8 @@ const Classes = () => {
 
   const courseData = [
     {
-      icon: (
-        <GiTakeMyMoney className="text-green-600 text-4xl mx-auto mb-4" />
-      ),
-      title: t("classTeach.data.5.title"),
+      icon: <AiOutlineBook className="text-blue-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.0.title"),
       description:
       t("classTeach.data.0.description"),
       borderColor: "border-blue-200",
@@ -134,33 +132,36 @@ const Classes = () => {
       borderColor: "border-orange-200",
     },
     {
-      icon: <RiAccountCircleLine className="text-orange-600 text-4xl mx-auto mb-4" />,
-      title: t("classTeach.data.4.title"),
-      
+
+      icon: (
+        <MdOutlineBusinessCenter className="text-green-600 text-4xl mx-auto mb-4" />
+      ),
+      title: t("classTeach.data.2.title"),
       description:
       t("classTeach.data.2.description"),
       borderColor: "border-green-200",
     },
     {
-      icon: <AiOutlineBook className="text-blue-600 text-4xl mx-auto mb-4" />,
-      title: t("classTeach.data.0.title"),
-      
+ 
+      icon: <AiOutlineBank className="text-blue-600 text-4xl mx-auto mb-4" />,
+        title: t("classTeach.data.3.title"),
       description:
       t("classTeach.data.3.description"),
       borderColor: "border-blue-200",
     },
-    {icon: <AiOutlineBank className="text-blue-600 text-4xl mx-auto mb-4" />,
-      title: t("classTeach.data.3.title"),
-      
+    {
+      icon: <RiAccountCircleLine className="text-orange-600 text-4xl mx-auto mb-4" />,
+      title: t("classTeach.data.4.title"),
       description:
       t("classTeach.data.4.description"),
       borderColor: "border-orange-200",
     },
     {
       icon: (
-        <MdOutlineBusinessCenter className="text-green-600 text-4xl mx-auto mb-4" />
+        <GiTakeMyMoney className="text-green-600 text-4xl mx-auto mb-4" />
       ),
-      title: t("classTeach.data.2.title"),
+      title: t("classTeach.data.5.title"),
+
       description:
       t("classTeach.data.5.description"),
       borderColor: "border-green-200",
