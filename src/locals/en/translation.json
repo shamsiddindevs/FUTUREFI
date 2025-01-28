@@ -17,8 +17,8 @@
     "cta": "Browse Courses",
     "cta2": "Sign Up for a Class",
     "count": {
-      "module": "Modules",
-      "lesson": "Lessons",
+      "module": "Classes",
+      "lesson": "Courses",
       "view": "Views"
     }
   },
@@ -183,7 +183,8 @@
         "placeholder": "Share any additional details here"
       }
     },
-    "submitButton": "Submit"
+    "submitButton": "Submit",
+    "loading": "Loading..."
   },
 
   "quiz":{

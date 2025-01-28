@@ -17,8 +17,8 @@
     "cta": "  Kurslarni ko‘rib chiqish",
     "cta2": "Darsga yozilish",
     "count": {
-      "module": "Modullar",
-      "lesson": "Darslar",
+      "module": "Darslar",
+      "lesson": "Kurslar",
       "view": "Ko'rilgan"
     }
   },
@@ -181,7 +181,8 @@
         "placeholder": "Qo‘shimcha ma’lumot kiriting"
       }
     },
-    "submitButton": "Yuborish"
+    "submitButton": "Yuborish",
+    "loading": "Yuklanmoqda..."
   },
     "quiz": {
       "title": "Bilimingizni sinang",
