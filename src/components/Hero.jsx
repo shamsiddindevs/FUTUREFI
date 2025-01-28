@@ -75,14 +75,20 @@ const Hero = () => {
             </div>
             <div className=" flex gap-10">
               <div className=" font-semibold">
-                <p className="text-2xl lg:text-[30px] font-medium">6</p>
+              <CountUp
+                  className="text-2xl lg:text-[30px] font-medium"
+                  start={0}
+                  end={statistics?.classes}
+                  duration={3}
+                  separator=","
+                />
                 <p className="lg:text-lg">{t("hero.count.module")}</p>
               </div>
               <div className=" font-semibold">
                 <CountUp
                   className="text-2xl lg:text-[30px] font-medium"
                   start={0}
-                  end={statistics?.videos}
+                  end={statistics?.moduls}
                   duration={3}
                   separator=","
                 />
