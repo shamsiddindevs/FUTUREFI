@@ -89,7 +89,7 @@ const ContactForm = () => {
               <h2 className="text-xl font-semibold">
                 {t("contact.email_address")}
               </h2>
-              <a aria-label="Email address" href={`mailto:devshamsiddin@gmail.com`}  className="text-gray-600">info@futurefinetwork.org</a>
+              <a aria-label="Email address" href={`mailto:info@futurefinetwork.org`}  className="text-gray-600">info@futurefinetwork.org</a>
             </div>
           </div>
           <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
