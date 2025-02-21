@@ -39,7 +39,7 @@ const BusinessFinanceTraining = () => {
               <img
               loading="lazy" 
                 src={money}
-                alt="money finance "
+                alt="Learn Personal Finance and Wealth Management with Future Fi Network"
                 className=" object-cover object-center flex-1"
               />
             </div>
@@ -59,7 +59,7 @@ const BusinessFinanceTraining = () => {
               <img
               loading="lazy" 
                 src={bitcoin}
-                alt="money finance "
+                alt="Finance course for beginners in Uzbekistan"
               />
               {/* <div className=" skeleton flex items-center justify-center w-full h-60 bg-gray-300 rounded sm:w-96 ">
                 <svg
@@ -107,7 +107,7 @@ const BusinessFinanceTraining = () => {
               <img
               loading="lazy" 
                 src={cubs}
-                alt="cubs money"
+                alt="Future Fi Network online finance course"
               />
               {/* <div className=" skeleton flex items-center justify-center w-full h-60 bg-gray-300 rounded sm:w-96 ">
                 <svg

@@ -110,7 +110,7 @@ const Hero = () => {
             <img
               loading="lazy"
               src={hero}
-              alt="hero image"
+              alt="Future Fi Network - Best Online Finance Courses in Tashkent, Uzbekistan"
               className="rounded-3xl object-cover w-full"
               width="800"
               height="600"

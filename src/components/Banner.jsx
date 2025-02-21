@@ -8,21 +8,21 @@ const Banner = ({ images = [], speed = 5000 }) => {
           <div className="section" style={{ "--speed": `${speed}ms` }}>
             {images?.map(({ id, image }) => (
               <div className="image" key={id}>
-                <img loading="lazy" src={image} alt={id} />
+                <img loading="lazy" src={image} alt={"Online Personal Finance Course in Tashkent"} />
               </div>
             ))}
           </div>
           <div className="section" style={{ "--speed": `${speed}ms` }}>
             {images?.map(({ id, image }) => (
               <div className="image" key={id}>
-                <img loading="lazy" src={image} alt={id} />
+                <img loading="lazy" src={image} alt={"How to manage your money wisely"} />
               </div>
             ))}
           </div>
           <div className="section" style={{ "--speed": `${speed}ms` }}>
             {images?.map(({ id, image }) => (
               <div className="image" key={id}>
-                <img loading="lazy" src={image} alt={id} />
+                <img loading="lazy" src={image} alt={"Best personal finance course in Tashkent"} />
               </div>
             ))}
           </div>

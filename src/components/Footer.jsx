@@ -23,8 +23,7 @@ const Footer = () => {
             <img
             loading="lazy"
               src={logo}
-              alt="FUTUREFI
-Network Logo"
+              alt="Future Fi Network logo - Personal Finance Platform"
               className="w-10 "
             />
             <span className=" font-medium leading-4 uppercase">

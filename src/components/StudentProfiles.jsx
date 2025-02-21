@@ -18,7 +18,7 @@ const StudentProfiles = () => {
             <img loading="lazy"
               src={onlineClass}
               className="w-12 mx-auto"
-              alt="onlineClass"
+              alt="Future Fi Network students attending an online finance course in Uzbekistan"
             />
           </div>
           <h3 className="text-xl font-semibold">

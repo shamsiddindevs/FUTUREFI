@@ -38,7 +38,7 @@ const Navbar = () => {
               <img
                 loading="lazy"
                 src={logo}
-                alt="header logo image"
+                alt="Future Fi Network logo in Tashkent"
                 className=" h-12  object-cover"
               />
               <span className=" font-medium leading-4 uppercase">
@@ -91,7 +91,7 @@ const Navbar = () => {
                   <img
                   loading="lazy"
                     src={lang == "uz" ? uzb : lang == "ru" ? russian : eng}
-                    alt="Language"
+                    alt="Language "
                     className="h-6"
                   />
                   {isRotate ? (
@@ -131,7 +131,7 @@ const Navbar = () => {
                     <img
                     loading="lazy"
                       src={uzb}
-                      alt="Language"
+                      alt="uzbek flag in finance cource"
                       className="h-6"
                     />
                   </li>
@@ -141,7 +141,7 @@ const Navbar = () => {
                     <img
                     loading="lazy"
                       src={russian}
-                      alt="Language"
+                      alt="russian flag image in finance cource"
                       className="h-6"
                     />
                   </li>
@@ -151,7 +151,7 @@ const Navbar = () => {
                     <img
                     loading="lazy"
                       src={eng}
-                      alt="Language"
+                      alt="english flag in finance cource"
                       className="h-6"
                     />
                   </li>

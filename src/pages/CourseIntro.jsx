@@ -82,7 +82,7 @@ const CourseIntro = () => {
                     <img
                       loading="lazy"
                       src={module.image || "https://picsum.photos/200/300"}
-                      alt={module.title}
+                      alt={"Budgeting and Savings Online Course in Tashkent"}
                       className="h-80 w-[300px] rounded-xl object-cover"
                     />
                     <div className="flex flex-col gap-10">
@@ -96,11 +96,11 @@ const CourseIntro = () => {
                       <div className="flex items-end justify-between gap-10">
                         <div className="flex flex-col gap-2">
                           <p className="flex items-center gap-2">
-                            <img loading="lazy" className="-ml-1" src={video} alt=" video icon" />
+                            <img loading="lazy" className="-ml-1" src={video} alt=" video icon of online finance course in Uzbekistan" />
                             <strong>{t("course.courseIntro.videos")}:</strong> {module.videos_count}
                           </p>
                           <p className="flex items-center gap-2">
-                            <img loading="lazy" className="ml-0" src={ques} alt="quiz icon" />
+                            <img loading="lazy" className="ml-0" src={ques} alt="quiz icon of online finance course in Uzbekistan" />
                             <strong>{t("course.courseIntro.tests")}:</strong> {module.questions_count}
                           </p>
                         </div>

@@ -31,7 +31,7 @@ const HeroSection = () => {
           <img
           loading="lazy"
             src={hero}
-            alt="Professional"
+            alt="Learn Personal Finance and Wealth Management with Future Fi Network"
             className="relative rounded-xl shadow-lg z-10"
           />
         </div>
